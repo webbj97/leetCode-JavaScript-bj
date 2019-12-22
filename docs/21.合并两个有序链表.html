@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>4.寻找两个有序数组的中位数 · Gitbook Use</title>
+        <title>21.合并两个有序链表 · Gitbook Use</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="9.回文数.html" />
     
-    
-    <link rel="prev" href="3.无重复字符的最长子串.html" />
+    <link rel="prev" href="20.有效的括号.html" />
     
 
     </head>
@@ -168,7 +166,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3" data-path="4.寻找两个有序数组的中位数.html">
+        <li class="chapter " data-level="2.3" data-path="4.寻找两个有序数组的中位数.html">
             
                 <a href="4.寻找两个有序数组的中位数.html">
             
@@ -259,7 +257,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.10" data-path="21.合并两个有序链表.html">
+        <li class="chapter active" data-level="2.10" data-path="21.合并两个有序链表.html">
             
                 <a href="21.合并两个有序链表.html">
             
@@ -302,7 +300,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >4.寻找两个有序数组的中位数</a>
+        <a href=".." >21.合并两个有序链表</a>
     </h1>
 </div>
 
@@ -317,49 +315,42 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><img src="../Images/title-4.png" width="100%"></p>
-<h1 align="center" id="&#x5BFB;&#x627E;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x7684;&#x4E2D;&#x4F4D;&#x6570;">&#x5BFB;&#x627E;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x7684;&#x4E2D;&#x4F4D;&#x6570;</h1>
+                                <p><img src="../Images/title-21.png" width="100%"></p>
+<h1 align="center" id="&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x94FE;&#x8868;">&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x94FE;&#x8868;</h1>
 
-<p>&#x7ED9;&#x5B9A;&#x4E24;&#x4E2A;&#x5927;&#x5C0F;&#x4E3A; m &#x548C; n &#x7684;&#x6709;&#x5E8F;&#x6570;&#x7EC4; nums1 &#x548C; nums2&#x3002;</p>
-<p>&#x4F60;&#x53EF;&#x4EE5;&#x5047;&#x8BBE; nums1 &#x548C; nums2 &#x4E0D;&#x4F1A;&#x540C;&#x65F6;&#x4E3A;&#x7A7A;&#x3002;</p>
-<table>
-<thead>
-<tr>
-<th>&#x8F93;&#x5165;</th>
-<th>&#x8F93;&#x51FA;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>nums1 = [1, 3]  &#xFF0C;nums2 = [2]</td>
-<td>2.0</td>
-</tr>
-<tr>
-<td>nums1 = [1, 2]  &#xFF0C;nums2 = [3, 4]</td>
-<td>2.5</td>
-</tr>
-</tbody>
-</table>
-<h3 id="&#x89E3;&#x6CD5;&#x4E00;&#xFF08;&#x5E38;&#x89C4;&#x601D;&#x8DEF;&#xFF09;">&#x89E3;&#x6CD5;&#x4E00;&#xFF08;&#x5E38;&#x89C4;&#x601D;&#x8DEF;&#xFF09;</h3>
-<p><img src="https://img-blog.csdnimg.cn/20191009102501500.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> findMedianSortedArrays = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums1, nums2</span>) </span>{
-    <span class="hljs-keyword">var</span> arr = []
-    arr = nums1.concat(nums2) <span class="hljs-comment">// &#x5408;&#x5E76;</span>
-    <span class="hljs-keyword">var</span> mid = <span class="hljs-built_in">Math</span>.floor(arr.length / <span class="hljs-number">2</span>) <span class="hljs-comment">//</span>
-    arr.sort((a, b)=&gt;{
-        <span class="hljs-keyword">return</span> a - b
-    })
-    <span class="hljs-comment">// &#x6839;&#x636E;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x5224;&#x65AD;&#x4E2D;&#x4F4D;&#x6570;&#x662F;&#x5426;&#x9700;&#x8981;&#x5E73;&#x5747;&#x5206;</span>
-    <span class="hljs-keyword">if</span>(arr.length % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>){
-        <span class="hljs-keyword">return</span> ((arr[mid]+arr[mid<span class="hljs-number">-1</span>])/<span class="hljs-number">2</span>).toFixed(<span class="hljs-number">1</span>)
-    }<span class="hljs-keyword">else</span>{
-        <span class="hljs-keyword">return</span> arr[mid].toFixed(<span class="hljs-number">1</span>)
+<h2 id="&#x89E3;&#x6CD5;&#x4E00;&#xFF08;&#x9012;&#x5F52;&#xFF09;">&#x89E3;&#x6CD5;&#x4E00;&#xFF08;&#x9012;&#x5F52;&#xFF09;</h2>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * Definition for singly-linked list.
+ * function ListNode(val) {
+ *     this.val = val;
+ *     this.next = null;
+ * }
+ */</span>
+<span class="hljs-comment">/**
+ * @param {ListNode} l1
+ * @param {ListNode} l2
+ * @return {ListNode}
+ */</span>
+<span class="hljs-keyword">var</span> mergeTwoLists = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">l1, l2</span>) </span>{
+    <span class="hljs-keyword">if</span> (l1 == <span class="hljs-literal">null</span>) {
+        <span class="hljs-keyword">return</span> l2;
     }
-};
+    <span class="hljs-keyword">if</span> (l2 == <span class="hljs-literal">null</span>) {
+        <span class="hljs-keyword">return</span> l1;
+    }
+
+    <span class="hljs-keyword">if</span> (l1.val &lt; l2.val) {
+        l1.next = mergeTwoLists(l1.next, l2);
+        <span class="hljs-keyword">return</span> l1;
+    } <span class="hljs-keyword">else</span> {
+        l2.next = mergeTwoLists(l1, l2.next);
+        <span class="hljs-keyword">return</span> l2;
+    }
+}
 </code></pre>
-<h2 id="&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#x9012;&#x5F52;&#x6CD5;&#xFF09;">&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#x9012;&#x5F52;&#x6CD5;&#xFF09;</h2>
-<p>&#x5F85;&#x5B8C;&#x5584;</p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2019-11-19 14:18:39 </span> </footer>
+<p><img src="https://img-blog.csdnimg.cn/20191226173400574.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<h2 id="&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#xFF09;">&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#xFF09;</h2>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2019-12-22 17:59:59 </span> </footer>
                                 
                                 </section>
                             
@@ -386,14 +377,10 @@
 
             
                 
-                <a href="3.无重复字符的最长子串.html" class="navigation navigation-prev " aria-label="Previous page: 3.无重复长度的字符串">
+                <a href="20.有效的括号.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 20.有效的括号">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="9.回文数.html" class="navigation navigation-next " aria-label="Next page: 9.回文数">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -402,7 +389,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"4.寻找两个有序数组的中位数","level":"2.3","depth":1,"next":{"title":"9.回文数","level":"2.4","depth":1,"path":"docs/9.回文数.md","ref":"docs/9.回文数.md","articles":[]},"previous":{"title":"3.无重复长度的字符串","level":"2.2","depth":1,"path":"docs/3.无重复字符的最长子串.md","ref":"docs/3.无重复字符的最长子串.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/4.寻找两个有序数组的中位数.md","mtime":"2019-11-19T06:18:39.778Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-22T10:00:03.723Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"21.合并两个有序链表","level":"2.10","depth":1,"previous":{"title":"20.有效的括号","level":"2.9","depth":1,"path":"docs/20.有效的括号.md","ref":"docs/20.有效的括号.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/21.合并两个有序链表.md","mtime":"2019-12-22T09:59:59.694Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-22T10:00:03.723Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
