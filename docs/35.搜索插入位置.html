@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>9.回文数 · Gitbook Use</title>
+        <title>35.搜索插入位置 · Gitbook Use</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="11.盛水最多的容器.html" />
     
-    
-    <link rel="prev" href="4.寻找两个有序数组的中位数.html" />
+    <link rel="prev" href="34.在排序数组中查找元素的第一个和最后一个位置.html" />
     
 
     </head>
@@ -181,7 +179,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.4" data-path="9.回文数.html">
+        <li class="chapter " data-level="2.4" data-path="9.回文数.html">
             
                 <a href="9.回文数.html">
             
@@ -363,7 +361,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.18" data-path="35.搜索插入位置.html">
+        <li class="chapter active" data-level="2.18" data-path="35.搜索插入位置.html">
             
                 <a href="35.搜索插入位置.html">
             
@@ -406,7 +404,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >9.回文数</a>
+        <a href=".." >35.搜索插入位置</a>
     </h1>
 </div>
 
@@ -421,71 +419,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><img src="../Images/title-9.png" width="100%"></p>
-<h1 align="center" id="&#x56DE;&#x6587;&#x6570;">&#x56DE;&#x6587;&#x6570;</h1>
+                                <p><img src="../Images/title-35.png" width="100%"></p>
+<h1 align="center" id="&#x6700;&#x5927;&#x5B50;&#x5E8F;&#x548C;">&#x6700;&#x5927;&#x5B50;&#x5E8F;&#x548C;</h1>
 
-<p> <strong>&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x662F;&#x5426;&#x662F;&#x56DE;&#x6587;&#x6570;&#x3002;&#x56DE;&#x6587;&#x6570;&#x662F;&#x6307;&#x6B63;&#x5E8F;&#xFF08;&#x4ECE;&#x5DE6;&#x5411;&#x53F3;&#xFF09;&#x548C;&#x5012;&#x5E8F;&#xFF08;&#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#xFF09;&#x8BFB;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#x6574;&#x6570;&#x3002;</strong>
-| &#x793A;&#x4F8B; | &#x7ED3;&#x679C; |
-|--|--|
-| &#x8F93;&#x5165;: 121 |  &#x8F93;&#x51FA;: true|
-| &#x8F93;&#x5165;: -121 |  &#x8F93;&#x51FA;: false|
-| &#x8F93;&#x5165;: 10 |  &#x8F93;&#x51FA;: false|</p>
-<h3 id="&#x601D;&#x8DEF;&#x4E00;-&#x3001;&#x6570;&#x5B57;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x518D;&#x8F6C;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x6BD4;&#x5BF9;">&#x601D;&#x8DEF;&#x4E00; &#x3001;&#x6570;&#x5B57;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;&#x518D;&#x8F6C;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x6BD4;&#x5BF9;</h3>
-<p><img src="https://img-blog.csdnimg.cn/20190906140210907.png" width="50%"></p>
-<pre><code class="lang-js"><span class="hljs-comment">/**
- * @param {number} x
- * @return {boolean}
- */</span>
-<span class="hljs-keyword">var</span> isPalindrome = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">x</span>) </span>{
-    <span class="hljs-keyword">if</span>(x &lt; <span class="hljs-number">0</span>){
-        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
-    }
-    <span class="hljs-keyword">var</span> arr = x.toString().split(<span class="hljs-string">&apos;&apos;</span>)
-    <span class="hljs-keyword">var</span> len = arr.length
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i&lt; len/<span class="hljs-number">2</span>; i++){
-        <span class="hljs-keyword">if</span>(arr[i] != arr[len-i<span class="hljs-number">-1</span>]){
-            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; nums &#xFF0C;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x6700;&#x5927;&#x548C;&#x7684;&#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4;&#xFF08;&#x5B50;&#x6570;&#x7EC4;&#x6700;&#x5C11;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF09;&#xFF0C;&#x8FD4;&#x56DE;&#x5176;&#x6700;&#x5927;&#x548C;&#x3002;</p>
+<p>&#x8F93;&#x5165;:<code>[-2,1,-3,4,-1,2,1,-5,4]</code>
+&#x8F93;&#x51FA;: <code>6</code>
+&#x89E3;&#x91CA;: &#x8FDE;&#x7EED;&#x5B50;&#x6570;&#x7EC4; [4,-1,2,1] &#x7684;&#x548C;&#x6700;&#x5927;&#xFF0C;&#x4E3A; 6&#x3002;</p>
+<h2 id="&#x89E3;&#x6CD5;&#xFF08;&#x52A8;&#x6001;&#x89C4;&#x5212;&#xFF09;">&#x89E3;&#x6CD5;&#xFF08;&#x52A8;&#x6001;&#x89C4;&#x5212;&#xFF09;</h2>
+<p>&#x5047;&#x8BBE;&#x4F60;&#x662F;&#x4E00;&#x4E2A;&#x9009;&#x62E9;&#x6027;&#x9057;&#x5FD8;&#x7684;&#x8D4C;&#x5F92;&#xFF0C;&#x6570;&#x7EC4;&#x8868;&#x793A;&#x4F60;&#x8FD9;&#x51E0;&#x5929;&#x6765;&#x8D62;&#x94B1;&#x6216;&#x8005;&#x8F93;&#x94B1;&#xFF0C;</p>
+<ul>
+<li>&#x4F60;&#x7528;sum&#x6765;&#x8868;&#x793A;&#x8FD9;&#x51E0;&#x5929;&#x6765;&#x7684;&#x8F93;&#x8D62;&#xFF0C;</li>
+<li>&#x7528;temp&#x6765;&#x5B58;&#x50A8;&#x4F60;&#x624B;&#x91CC;&#x8D62;&#x5230;&#x7684;&#x6700;&#x591A;&#x7684;&#x94B1;&#xFF0C;</li>
+<li>&#x5982;&#x679C;&#x6628;&#x5929;&#x4F60;&#x624B;&#x4E0A;&#x8FD8;&#x662F;&#x8F93;&#x94B1;&#xFF08;sum &lt; 0&#xFF09;&#xFF0C;&#x4F60;&#x5FD8;&#x8BB0;&#x5B83;&#xFF0C;&#x660E;&#x5929;&#x7EE7;&#x7EED;&#x8D4C;&#x94B1;&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x4F60;&#x624B;&#x4E0A;&#x662F;&#x8D62;&#x94B1;(sum &gt; 0), &#x4F60;&#x8BB0;&#x5F97;&#xFF0C;&#x4F60;&#x7EE7;&#x7EED;&#x8D4C;&#x94B1;&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x4F60;&#x4E00;&#x76F4;&#x5728;&#x6570;&#x94B1;&#xFF0C;&#x4E5F;&#x8BF7;&#x8BB0;&#x4F4F;&#x4F60;&#x8F93;&#x7684;&#x6700;&#x5C11;&#x7684;&#x90A3;&#x6B21;</li>
+<li><code>&#x4F60;&#x8981;&#x8BB0;&#x5F97;&#x4F60;&#x624B;&#x6C14;&#x6700;&#x597D;&#x7684;&#x65F6;&#x5019;</code></li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> maxSubArray = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) </span>{
+    <span class="hljs-keyword">var</span> temp = nums[<span class="hljs-number">0</span>]
+    <span class="hljs-keyword">var</span> sum = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; i++){
+        <span class="hljs-keyword">if</span>(sum &gt; <span class="hljs-number">0</span>){
+            sum += nums[i] <span class="hljs-comment">//&#x7EC4;&#x5408;&gt;0,&#x5219;&#x662F;&#x4F18;&#x52BF;&#x7EC4;&#x5408;&#xFF0C;&#x4FDD;&#x7559;</span>
+        }<span class="hljs-keyword">else</span>{
+            sum = nums[i] <span class="hljs-comment">// &#x7EC4;&#x5408;&lt;0,&#x5219;&#x662F;&#x52A3;&#x52BF;&#x7EC4;&#x5408;&#xFF0C;&#x76F4;&#x63A5;&#x8986;&#x76D6;</span>
         }
+        temp = <span class="hljs-built_in">Math</span>.max(temp, sum),<span class="hljs-comment">//&#x7EF4;&#x62A4;&#x6700;&#x5927;&#x7684;&#x7EC4;&#x5408;&#x548C;&#x6216;&#x6700;&#x5927;&#x7684;&#x5355;&#x4E2A;&#x503C;</span>
     }
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+    <span class="hljs-keyword">return</span> temp
 };
 </code></pre>
-<h3 id="&#x601D;&#x8DEF;&#x4E8C;&#x3001;&#x6570;&#x5B66;&#x65B9;&#x6CD5;&#x6570;&#x5B57;&#x6BD4;&#x5BF9;">&#x601D;&#x8DEF;&#x4E8C;&#x3001;&#x6570;&#x5B66;&#x65B9;&#x6CD5;&#x6570;&#x5B57;&#x6BD4;&#x5BF9;</h3>
-<p>&#x5229;&#x7528;&#x6570;&#x5B66;&#x7684;&#x601D;&#x60F3;&#xFF0C;&#x901A;&#x8FC7;&#x53D6;&#x6574;&#x53D6;&#x4F59;&#x7684;&#x65B9;&#x5F0F;&#x83B7;&#x5F97;&#x6BCF;&#x4E2A;&#x4F4D;&#x7F6E;&#x7684;&#x6570;&#x5B57;
-<img src="https://img-blog.csdnimg.cn/20190906152007930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">symmetry</span>(<span class="hljs-params">x</span>) </span>{
-    <span class="hljs-keyword">if</span> (x &lt; <span class="hljs-number">0</span>) {
-        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
-    }
-    <span class="hljs-keyword">var</span> len = <span class="hljs-number">1</span>
-    <span class="hljs-keyword">while</span>(x/len &gt;= <span class="hljs-number">10</span>){
-        len *= <span class="hljs-number">10</span>
-    }<span class="hljs-comment">// &#x4F20;&#x5165;123-&gt; 100 &#x5F97;&#x5230;100&#x8FD9;&#x4E2A;&#x4E0E;123&#x540C;&#x7EA7;&#x522B;&#x7684;&#x6574;&#x6570;</span>
-    <span class="hljs-keyword">while</span>(x &gt; <span class="hljs-number">0</span>){
-        <span class="hljs-keyword">var</span> left = <span class="hljs-built_in">parseInt</span>(x / len) <span class="hljs-comment">//&#x5F97;&#x9996;&#x4F4D;</span>
-        <span class="hljs-keyword">var</span> right = x % <span class="hljs-number">10</span> <span class="hljs-comment">// &#x5F97;&#x672B;&#x4F4D;</span>
-        <span class="hljs-keyword">if</span>(left != right) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
-        x = <span class="hljs-built_in">parseInt</span>((x%len) / <span class="hljs-number">10</span>)  <span class="hljs-comment">//&#x53BB;&#x6389;&#x9996;&#x4F4D;-&gt;&#x53D6;&#x4F59;&#x957F;&#x5EA6; &#x53BB;&#x6389;&#x672B;&#x4F4D;-&gt;&#x53D6;&#x6574;10</span>
-        len /= <span class="hljs-number">100</span> <span class="hljs-comment">//&#x6BD4;&#x8F83;&#x4E00;&#x6B21;&#x51CF;&#x5C11;&#x4E24;&#x4F4D; </span>
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
-}
-</code></pre>
-<h3 id="&#x601D;&#x8DEF;&#x4E09;&#x3001;&#x524D;&#x4E24;&#x7248;&#x7684;&#x601D;&#x8DEF;&#x7ED3;&#x5408;&#xFF08;&#x5BF9;&#x6298;&#xFF09;">&#x601D;&#x8DEF;&#x4E09;&#x3001;&#x524D;&#x4E24;&#x7248;&#x7684;&#x601D;&#x8DEF;&#x7ED3;&#x5408;&#xFF08;&#x5BF9;&#x6298;&#xFF09;</h3>
-<p><img src="https://img-blog.csdnimg.cn/20190906162013675.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">symmetry</span>(<span class="hljs-params">x</span>) </span>{
-    <span class="hljs-keyword">if</span>(x &lt; <span class="hljs-number">0</span> || (x % <span class="hljs-number">10</span> == <span class="hljs-number">0</span> &amp;&amp; x != <span class="hljs-number">0</span>)){
-        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
-    }
-    <span class="hljs-keyword">var</span> index = <span class="hljs-number">0</span> <span class="hljs-comment">//&#x53F3;&#x4FA7;&#x503C; &#x6BCF;&#x6267;&#x884C;&#x4E00;&#x6B21;&#xFF0C;index = &#x65E7;&#x5C3E;&#x6570;*10 + &#x65B0;&#x5C3E;&#x6570;  &#x5B9E;&#x73B0;&#x4E86;&#x9006;&#x5E8F;</span>
-    <span class="hljs-keyword">while</span> (x &gt; index) {
-        index = index * <span class="hljs-number">10</span> + x % <span class="hljs-number">10</span>; <span class="hljs-comment">// 1 -&gt; 12 -&gt; 122</span>
-        x = <span class="hljs-built_in">parseInt</span>(x / <span class="hljs-number">10</span>) ; <span class="hljs-comment">//1221 -&gt; 122 -&gt; 12 -&gt; 1</span>
-    }
-    <span class="hljs-keyword">return</span> x == index || x == <span class="hljs-built_in">parseInt</span>(index / <span class="hljs-number">10</span>)
-}
-</code></pre>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2019-11-09 14:09:21 </span> </footer>
+<p><img src="https://img-blog.csdnimg.cn/20191211115223489.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2019-12-30 17:12:07 </span> </footer>
                                 
                                 </section>
                             
@@ -512,14 +478,10 @@
 
             
                 
-                <a href="4.寻找两个有序数组的中位数.html" class="navigation navigation-prev " aria-label="Previous page: 4.寻找两个有序数组的中位数">
+                <a href="34.在排序数组中查找元素的第一个和最后一个位置.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 34.在排序数组中查找元素的第一个和最后一个位置">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="11.盛水最多的容器.html" class="navigation navigation-next " aria-label="Next page: 11.盛水最多的容器">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -528,7 +490,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9.回文数","level":"2.4","depth":1,"next":{"title":"11.盛水最多的容器","level":"2.5","depth":1,"path":"docs/11.盛水最多的容器.md","ref":"docs/11.盛水最多的容器.md","articles":[]},"previous":{"title":"4.寻找两个有序数组的中位数","level":"2.3","depth":1,"path":"docs/4.寻找两个有序数组的中位数.md","ref":"docs/4.寻找两个有序数组的中位数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/9.回文数.md","mtime":"2019-11-09T06:09:21.514Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-30T09:12:10.772Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"35.搜索插入位置","level":"2.18","depth":1,"previous":{"title":"34.在排序数组中查找元素的第一个和最后一个位置","level":"2.17","depth":1,"path":"docs/34.在排序数组中查找元素的第一个和最后一个位置.md","ref":"docs/34.在排序数组中查找元素的第一个和最后一个位置.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/35.搜索插入位置.md","mtime":"2019-12-30T09:12:07.039Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-30T09:12:10.772Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
