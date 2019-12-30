@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>85.合并两个有序数组 · Gitbook Use</title>
+        <title>125.验证回文串 · Gitbook Use</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="125.验证回文串.html" />
     
-    
-    <link rel="prev" href="80.删除排序数组中的重复项II.html" />
+    <link rel="prev" href="85.合并两个有序数组.html" />
     
 
     </head>
@@ -467,7 +465,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.26" data-path="85.合并两个有序数组.html">
+        <li class="chapter " data-level="2.26" data-path="85.合并两个有序数组.html">
             
                 <a href="85.合并两个有序数组.html">
             
@@ -480,7 +478,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.27" data-path="125.验证回文串.html">
+        <li class="chapter active" data-level="2.27" data-path="125.验证回文串.html">
             
                 <a href="125.验证回文串.html">
             
@@ -523,7 +521,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >85.合并两个有序数组</a>
+        <a href=".." >125.验证回文串</a>
     </h1>
 </div>
 
@@ -538,46 +536,44 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><img src="../Images/title-85.png" width="100%"></p>
-<h1 align="center" id="&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x6570;&#x7EC4;">&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x6570;&#x7EC4;</h1>
+                                <p><img src="../Images/title-125.png" width="100%"></p>
+<h1 align="center" id="&#x9A8C;&#x8BC1;&#x56DE;&#x6587;&#x4E32;">&#x9A8C;&#x8BC1;&#x56DE;&#x6587;&#x4E32;</h1>
 
-<p>&#x7ED9;&#x5B9A;&#x4E24;&#x4E2A;&#x6709;&#x5E8F;&#x6574;&#x6570;&#x6570;&#x7EC4; nums1 &#x548C; nums2&#xFF0C;&#x5C06; nums2 &#x5408;&#x5E76;&#x5230; nums1 &#x4E2D;&#xFF0C;&#x4F7F;&#x5F97; num1 &#x6210;&#x4E3A;&#x4E00;&#x4E2A;&#x6709;&#x5E8F;&#x6570;&#x7EC4;&#x3002;</p>
-<p>&#x8BF4;&#x660E;:</p>
-<pre><code class="lang-js">&#x521D;&#x59CB;&#x5316; nums1 &#x548C; nums2 &#x7684;&#x5143;&#x7D20;&#x6570;&#x91CF;&#x5206;&#x522B;&#x4E3A; m &#x548C; n&#x3002;
-&#x4F60;&#x53EF;&#x4EE5;&#x5047;&#x8BBE; nums1 &#x6709;&#x8DB3;&#x591F;&#x7684;&#x7A7A;&#x95F4;&#xFF08;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E; m + n&#xFF09;&#x6765;&#x4FDD;&#x5B58; nums2 &#x4E2D;&#x7684;&#x5143;&#x7D20;&#x3002;
-&#x793A;&#x4F8B;:
-
-&#x8F93;&#x5165;:
-nums1 = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>], m = <span class="hljs-number">3</span>
-nums2 = [<span class="hljs-number">2</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>],       n = <span class="hljs-number">3</span>
-
-&#x8F93;&#x51FA;: [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>]
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x9A8C;&#x8BC1;&#x5B83;&#x662F;&#x5426;&#x662F;&#x56DE;&#x6587;&#x4E32;&#xFF0C;&#x53EA;&#x8003;&#x8651;&#x5B57;&#x6BCD;&#x548C;&#x6570;&#x5B57;&#x5B57;&#x7B26;&#xFF0C;&#x53EF;&#x4EE5;&#x5FFD;&#x7565;&#x5B57;&#x6BCD;&#x7684;&#x5927;&#x5C0F;&#x5199;&#x3002;</p>
+<p>&#x8BF4;&#x660E;&#xFF1A;&#x672C;&#x9898;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x5B9A;&#x4E49;&#x4E3A;&#x6709;&#x6548;&#x7684;&#x56DE;&#x6587;&#x4E32;&#x3002;</p>
+<p>&#x793A;&#x4F8B; 1:</p>
+<pre><code class="lang-js">&#x8F93;&#x5165;: <span class="hljs-string">&quot;A man, a plan, a canal: Panama&quot;</span>
+&#x8F93;&#x51FA;: <span class="hljs-literal">true</span>
+</code></pre>
+<p>&#x793A;&#x4F8B; 2:</p>
+<pre><code class="lang-js">&#x8F93;&#x5165;: <span class="hljs-string">&quot;race a car&quot;</span>
+&#x8F93;&#x51FA;: <span class="hljs-literal">false</span>
 </code></pre>
 <p>&#x7B2C;&#x4E00;&#x7248;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> merge = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums1, m, nums2, n</span>) </span>{
-  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span> ;i &lt; n; i++){
-    nums1[m] = nums2[i]
-    m++
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> isPalindrome = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">s</span>) </span>{
+  <span class="hljs-keyword">var</span> left = <span class="hljs-number">0</span>, right = s.length - <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">while</span> (left &lt; right) {
+    <span class="hljs-keyword">var</span> leftChar = s.charAt(left).toLowerCase();<span class="hljs-comment">//&#x5DE6; &#x4E0B;&#x6807;</span>
+    <span class="hljs-keyword">while</span> ((!(leftChar &gt;= <span class="hljs-string">&apos;a&apos;</span> &amp;&amp; leftChar &lt;= <span class="hljs-string">&apos;z&apos;</span>) &amp;&amp; !(leftChar &gt;= <span class="hljs-string">&apos;0&apos;</span> &amp;&amp; leftChar &lt;= <span class="hljs-string">&apos;9&apos;</span>)) &amp;&amp; left &lt; right) {
+      left++;
+      leftChar = s.charAt(left).toLowerCase();
+    }
+    <span class="hljs-keyword">var</span> rightChar = s.charAt(right).toLowerCase(); <span class="hljs-comment">//&#x53F3; &#x4E0B;&#x6807;</span>
+    <span class="hljs-keyword">while</span> ((!(rightChar &gt;= <span class="hljs-string">&apos;a&apos;</span> &amp;&amp; rightChar &lt;= <span class="hljs-string">&apos;z&apos;</span>) &amp;&amp; !(rightChar &gt;= <span class="hljs-string">&apos;0&apos;</span> &amp;&amp; rightChar &lt;= <span class="hljs-string">&apos;9&apos;</span>)) &amp;&amp; left &lt; right) {
+      right--;
+      rightChar = s.charAt(right).toLowerCase();
+    }
+    <span class="hljs-keyword">if</span> (leftChar !== rightChar) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    }
+
+    left++;
+    right--;
   }
-  nums1.sort(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a,b</span>) </span>{
-    <span class="hljs-keyword">return</span> a-b
-  })
-  <span class="hljs-keyword">return</span> nums1
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
 };
 </code></pre>
-<p>&#x7B2C;&#x4E8C;&#x7248;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> merge = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">nums1, m, nums2, n</span>) </span>{
-  nums1.splice(m, nums1.length - m);
-  nums2.forEach((item) =&gt; {
-    nums1.push(item)
-  });
-  nums1.sort(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>{
-    <span class="hljs-keyword">return</span> a - b
-  })
-  <span class="hljs-keyword">return</span> nums1
-};
-</code></pre>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2019-12-30 18:08:04 </span> </footer>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2019-12-30 18:20:11 </span> </footer>
                                 
                                 </section>
                             
@@ -604,14 +600,10 @@ nums2 = [<span class="hljs-number">2</span>,<span class="hljs-number">5</span>,<
 
             
                 
-                <a href="80.删除排序数组中的重复项II.html" class="navigation navigation-prev " aria-label="Previous page: 80.删除排序数组中的重复项II">
+                <a href="85.合并两个有序数组.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 85.合并两个有序数组">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="125.验证回文串.html" class="navigation navigation-next " aria-label="Next page: 125.验证回文串">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -620,7 +612,7 @@ nums2 = [<span class="hljs-number">2</span>,<span class="hljs-number">5</span>,<
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"85.合并两个有序数组","level":"2.26","depth":1,"next":{"title":"125.验证回文串","level":"2.27","depth":1,"path":"docs/125.验证回文串.md","ref":"docs/125.验证回文串.md","articles":[]},"previous":{"title":"80.删除排序数组中的重复项II","level":"2.25","depth":1,"path":"docs/80.删除排序数组中的重复项II.md","ref":"docs/80.删除排序数组中的重复项II.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/85.合并两个有序数组.md","mtime":"2019-12-30T10:08:04.652Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-30T10:20:14.996Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"125.验证回文串","level":"2.27","depth":1,"previous":{"title":"85.合并两个有序数组","level":"2.26","depth":1,"path":"docs/85.合并两个有序数组.md","ref":"docs/85.合并两个有序数组.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/125.验证回文串.md","mtime":"2019-12-30T10:20:11.807Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-30T10:20:14.996Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
