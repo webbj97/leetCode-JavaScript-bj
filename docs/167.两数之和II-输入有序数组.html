@@ -682,20 +682,21 @@
 <ul>
 <li>&#x7531;&#x9898;&#x5E72;&#x5F97;&#x77E5;&#x4E00;&#x5B9A;&#x4F1A;&#x6709;&#x4E00;&#x7EC4;&#x89E3;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x8003;&#x8651;&#x7528; &#x548C; - A = B</li>
 <li>&#x5728;&#x6570;&#x7EC4;&#x4E4B;&#x4E2D;&#x67E5;&#x627E;B&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x4E0B;&#x6807; </li>
-<li>indexOf&#x8FD9;&#x4E2A;API&#x4E5F;&#x662F;&#x904D;&#x5386;&#x6570;&#x7EC4;&#xFF0C;&#x6240;&#x4EE5;&#x6548;&#x7387;&#x53CD;&#x800C;&#x6BD4;&#x53CC;&#x5FAA;&#x73AF;&#x8FD8;&#x5DEE;<pre><code class="lang-js"><span class="hljs-keyword">var</span> twoSum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">num, target</span>) </span>{
-  <span class="hljs-keyword">var</span> len = num.length
-  <span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>
-  <span class="hljs-keyword">while</span>(i &lt; len){
-      <span class="hljs-keyword">var</span> temp = target - num[i]
-      <span class="hljs-keyword">if</span>(num.lastIndexOf(temp) != <span class="hljs-number">-1</span>){
-          <span class="hljs-keyword">return</span> [i+<span class="hljs-number">1</span>, num.lastIndexOf(temp)+<span class="hljs-number">1</span>]
-      }
-      i++
-  }
+<li>indexOf&#x8FD9;&#x4E2A;API&#x4E5F;&#x662F;&#x904D;&#x5386;&#x6570;&#x7EC4;&#xFF0C;&#x6240;&#x4EE5;&#x6548;&#x7387;&#x53CD;&#x800C;&#x6BD4;&#x53CC;&#x5FAA;&#x73AF;&#x8FD8;&#x5DEE;</li>
+</ul>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> twoSum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">num, target</span>) </span>{
+    <span class="hljs-keyword">var</span> len = num.length
+    <span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">while</span>(i &lt; len){
+        <span class="hljs-keyword">var</span> temp = target - num[i]
+        <span class="hljs-keyword">if</span>(num.lastIndexOf(temp) != <span class="hljs-number">-1</span>){
+            <span class="hljs-keyword">return</span> [i+<span class="hljs-number">1</span>, num.lastIndexOf(temp)+<span class="hljs-number">1</span>]
+        }
+        i++
+    }
 };
 </code></pre>
-<img src="https://img-blog.csdnimg.cn/20191231103041771.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></li>
-</ul>
+<p><img src="https://img-blog.csdnimg.cn/20191231103041771.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
 <h2 id="&#x89E3;&#x6CD5;&#x4E09;&#xFF08;map&#xFF09;">&#x89E3;&#x6CD5;&#x4E09;&#xFF08;Map&#xFF09;</h2>
 <pre><code>x + y = target
 y = target - x
@@ -752,7 +753,7 @@ x + (target - x) = target
 </code></pre>
 <img src="https://img-blog.csdnimg.cn/20191231114657490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></li>
 </ul>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2019-12-31 11:46:32 </span> </footer>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2019-12-31 14:01:58 </span> </footer>
                                 
                                 </section>
                             
@@ -795,7 +796,7 @@ x + (target - x) = target
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"167.两数之和II-输入有序数组","level":"2.29","depth":1,"next":{"title":"169.多数元素","level":"2.30","depth":1,"path":"docs/169.多数元素.md","ref":"docs/169.多数元素.md","articles":[]},"previous":{"title":"141.环形链表","level":"2.28","depth":1,"path":"docs/141.环形链表.md","ref":"docs/141.环形链表.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/167.两数之和II-输入有序数组.md","mtime":"2019-12-31T03:46:32.692Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-31T06:00:44.081Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"167.两数之和II-输入有序数组","level":"2.29","depth":1,"next":{"title":"169.多数元素","level":"2.30","depth":1,"path":"docs/169.多数元素.md","ref":"docs/169.多数元素.md","articles":[]},"previous":{"title":"141.环形链表","level":"2.28","depth":1,"path":"docs/141.环形链表.md","ref":"docs/141.环形链表.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/167.两数之和II-输入有序数组.md","mtime":"2019-12-31T06:01:58.849Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-31T06:02:02.188Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
