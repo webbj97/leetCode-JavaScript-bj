@@ -1,9 +1,13 @@
-var data = []
-for(let i = 0; i < 10; i++){
-    data[i] = function () {
-        console.log('1:', i);
-    }
+function aaa(callback) {
+    callback('1')
 }
-data[0]()
-data[1]()
-data[2]()
+
+
+aaa(console.log)
+
+
+homeModel.getSwiper(console.log)
+
+function callback(res){
+    console.log(res)
+}
