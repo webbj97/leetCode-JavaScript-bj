@@ -27,7 +27,7 @@ var findDisappearedNumbers = function(nums) {
             obj[nums[i]] = 1
         }
     }
-    console.log('obj:', obj);
+    for(let i = 0; )
     
 };
 
