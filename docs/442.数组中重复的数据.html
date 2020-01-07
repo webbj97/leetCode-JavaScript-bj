@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>237.删除链表中的节点 · Gitbook Use</title>
+        <title>442.数组中重复的数据 · Gitbook Use</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="268.缺失数字.html" />
     
-    
-    <link rel="prev" href="219.存在重复元素II.html" />
+    <link rel="prev" href="414.第三大的数.html" />
     
 
     </head>
@@ -662,7 +660,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.41" data-path="237.删除链表中的节点.html">
+        <li class="chapter " data-level="2.41" data-path="237.删除链表中的节点.html">
             
                 <a href="237.删除链表中的节点.html">
             
@@ -792,7 +790,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.51" data-path="442.数组中重复的数据.html">
+        <li class="chapter active" data-level="2.51" data-path="442.数组中重复的数据.html">
             
                 <a href="442.数组中重复的数据.html">
             
@@ -907,7 +905,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >237.删除链表中的节点</a>
+        <a href=".." >442.数组中重复的数据</a>
     </h1>
 </div>
 
@@ -922,13 +920,46 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><img src="../Images/title-237.png" width="100%"></p>
-<h1 align="center" id="&#x5220;&#x9664;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;">&#x5220;&#x9664;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x8282;&#x70B9;</h1>
+                                <p><img src="../Images/title-442.png" width="100%"></p>
+<h1 align="center" id="&#x6570;&#x7EC4;&#x4E2D;&#x91CD;&#x590D;&#x7684;&#x6570;&#x636E;">&#x6570;&#x7EC4;&#x4E2D;&#x91CD;&#x590D;&#x7684;&#x6570;&#x636E;</h1>
 
-<p><img src="https://img-blog.csdnimg.cn/20191104150931959.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;">!</p>
-<p><a href="https://img-blog.csdnimg.cn/2019110415083220.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" target="_blank">&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;</a></p>
-<p>&#x8FD9;&#x91CC;&#x7684;&#x601D;&#x8DEF;&#x5C31;&#x662F;<code>&#x8DF3;&#x8FC7;&#x6307;&#x5B9A;&#x8282;&#x70B9;</code></p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-01-02 16:35:16 </span> </footer>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4; a&#xFF0C;&#x5176;&#x4E2D;1 &#x2264; a[i] &#x2264; n &#xFF08;n&#x4E3A;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#xFF09;, &#x5176;&#x4E2D;&#x6709;&#x4E9B;&#x5143;&#x7D20;&#x51FA;&#x73B0;&#x4E24;&#x6B21;&#x800C;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#x3002;</p>
+<p>&#x627E;&#x5230;&#x6240;&#x6709;&#x51FA;&#x73B0;&#x4E24;&#x6B21;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4E0D;&#x7528;&#x5230;&#x4EFB;&#x4F55;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#x5E76;&#x5728;O(n)&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5185;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5417;&#xFF1F;</p>
+<p><strong>&#x8F93;&#x5165;</strong>: [4,3,2,7,8,2,3,1]</p>
+<p><strong>&#x8F93;&#x51FA;:</strong> [2,3]</p>
+<h2 id="&#x89E3;&#x6CD5;&#x4E00;&#xFF08;&#x5FAA;&#x73AF;&#x67E5;&#x627E;&#xFF09;">&#x89E3;&#x6CD5;&#x4E00;&#xFF08;&#x5FAA;&#x73AF;&#x67E5;&#x627E;&#xFF09;</h2>
+<ul>
+<li>&#x65F6;&#x95F4;&#x8D1F;&#x8D23;&#x5EA6; O(n^2)</li>
+<li>&#x8003;&#x8651;&#x8FDB;&#x884C;&#x4F18;&#x5316;<pre><code class="lang-js"><span class="hljs-keyword">var</span> findDuplicates = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) </span>{
+  <span class="hljs-keyword">let</span> arr = [];
+  nums.map((item, index) =&gt; {
+      <span class="hljs-keyword">if</span> (nums.indexOf(item) !== index) {
+          arr.push(item)
+      }
+  });
+  <span class="hljs-keyword">return</span> arr
+};
+</code></pre>
+</li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/20200107160112696.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<h2 id="&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;obj&#xFF09;">&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;obj&#xFF09;</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> findDuplicates = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) </span>{
+    <span class="hljs-keyword">var</span> obj = {}
+    <span class="hljs-keyword">var</span> arr = []
+    nums.forEach(item =&gt; {
+        <span class="hljs-keyword">if</span>(obj[item]){
+            arr.push(item)
+        }<span class="hljs-keyword">else</span>{
+            obj[item] = <span class="hljs-number">1</span>
+        }
+    });
+    <span class="hljs-keyword">return</span> arr
+};
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/2020010716143542.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-01-07 16:14:11 </span> </footer>
                                 
                                 </section>
                             
@@ -955,14 +986,10 @@
 
             
                 
-                <a href="219.存在重复元素II.html" class="navigation navigation-prev " aria-label="Previous page: 219.存在重复元素II">
+                <a href="414.第三大的数.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 414.第三大的数">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="268.缺失数字.html" class="navigation navigation-next " aria-label="Next page: 268.缺失数字">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -971,7 +998,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"237.删除链表中的节点","level":"2.41","depth":1,"next":{"title":"268.缺失数字","level":"2.42","depth":1,"path":"docs/268.缺失数字.md","ref":"docs/268.缺失数字.md","articles":[]},"previous":{"title":"219.存在重复元素II","level":"2.40","depth":1,"path":"docs/219.存在重复元素II.md","ref":"docs/219.存在重复元素II.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/237.删除链表中的节点.md","mtime":"2020-01-02T08:35:16.461Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-07T08:15:10.301Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"442.数组中重复的数据","level":"2.51","depth":1,"next":{"title":"二分","level":"3.1","depth":1,"ref":"","articles":[]},"previous":{"title":"414.第三大的数","level":"2.50","depth":1,"path":"docs/414.第三大的数.md","ref":"docs/414.第三大的数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/442.数组中重复的数据.md","mtime":"2020-01-07T08:14:11.740Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-07T08:15:10.301Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
