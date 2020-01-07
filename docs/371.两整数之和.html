@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>219.存在重复元素II · Gitbook Use</title>
+        <title>371.两整数之和 · Gitbook Use</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="237.删除链表中的节点.html" />
     
-    
-    <link rel="prev" href="217.存在重复元素.html" />
+    <link rel="prev" href="350.两个数组的交集II.html" />
     
 
     </head>
@@ -649,7 +647,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.40" data-path="219.存在重复元素II.html">
+        <li class="chapter " data-level="2.40" data-path="219.存在重复元素II.html">
             
                 <a href="219.存在重复元素II.html">
             
@@ -753,7 +751,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.48" data-path="371.两整数之和.html">
+        <li class="chapter active" data-level="2.48" data-path="371.两整数之和.html">
             
                 <a href="371.两整数之和.html">
             
@@ -868,7 +866,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >219.存在重复元素II</a>
+        <a href=".." >371.两整数之和</a>
     </h1>
 </div>
 
@@ -883,69 +881,51 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><img src="../Images/title-219.png" width="100%"></p>
-<h1 align="center" id="&#x5B58;&#x5728;&#x91CD;&#x590D;&#x5143;&#x7D20;ii">&#x5B58;&#x5728;&#x91CD;&#x590D;&#x5143;&#x7D20;II</h1>
+                                <p><img src="../Images/title-371.png" width="100%"></p>
+<h1 align="center" id="&#x4E24;&#x6574;&#x6570;&#x4E4B;&#x548C;">&#x4E24;&#x6574;&#x6570;&#x4E4B;&#x548C;</h1>
 
-<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x6570;&#x7EC4;&#x548C;&#x4E00;&#x4E2A;&#x6574;&#x6570; k&#xFF0C;&#x5224;&#x65AD;&#x6570;&#x7EC4;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x7D22;&#x5F15; i &#x548C; j&#xFF0C;</p>
-<p>&#x4F7F;&#x5F97; nums [i] = nums [j]&#xFF0C;&#x5E76;&#x4E14; i &#x548C; j &#x7684;&#x5DEE;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x6700;&#x5927;&#x4E3A; k&#x3002;</p>
-<table>
-<thead>
-<tr>
-<th>&#x8F93;&#x5165;</th>
-<th>&#x8F93;&#x51FA;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&#x8F93;&#x5165;: nums = [1,2,3,1], k = 3</td>
-<td>&#x8F93;&#x51FA;: true</td>
-</tr>
-<tr>
-<td>&#x8F93;&#x5165;: nums = [1,0,1,1], k = 1</td>
-<td>&#x8F93;&#x51FA;: true</td>
-</tr>
-<tr>
-<td>&#x8F93;&#x5165;: nums = [1,2,3,1,2,3], k = 2</td>
-<td>&#x8F93;&#x51FA;: false</td>
-</tr>
-</tbody>
-</table>
-<h2 id="&#x89E3;&#x6CD5;&#x4E00;&#xFF08;&#x54C8;&#x5E0C;&#x601D;&#x60F3;&#xFF09;">&#x89E3;&#x6CD5;&#x4E00;&#xFF08;&#x54C8;&#x5E0C;&#x601D;&#x60F3;&#xFF09;</h2>
-<p><img src="https://img-blog.csdnimg.cn/2020010216111090.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<ul>
-<li>&#x5229;&#x7528;&#x5BF9;&#x8C61;&#x7ED3;&#x6784;&#x67E5;&#x8BE2;&#x7684;&#x6765;&#x4F18;&#x5316;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;</li>
-</ul>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> containsNearbyDuplicate = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">nums, k</span>) </span>{
-    <span class="hljs-keyword">const</span> map = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>();
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; i++) {
-        <span class="hljs-keyword">if</span> (map.has(nums[i]) &amp;&amp; i - map.get(nums[i]) &lt;= k) {
-            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
-        } <span class="hljs-keyword">else</span> {
-            map.set(nums[i], i);
-        }
+<p>&#x4E0D;&#x4F7F;&#x7528;&#x8FD0;&#x7B97;&#x7B26; + &#x548C; - &#xFF0C;&#x8BA1;&#x7B97;&#x4E24;&#x6574;&#x6570;a &#x3001;b &#x4E4B;&#x548C;&#x3002;</p>
+<pre><code class="lang-js">&#x793A;&#x4F8B; <span class="hljs-number">1</span>:
+
+&#x8F93;&#x5165;: a = <span class="hljs-number">1</span>, b = <span class="hljs-number">2</span>
+&#x8F93;&#x51FA;: <span class="hljs-number">3</span>
+&#x793A;&#x4F8B; <span class="hljs-number">2</span>:
+
+&#x8F93;&#x5165;: a = <span class="hljs-number">-2</span>, b = <span class="hljs-number">3</span>
+&#x8F93;&#x51FA;: <span class="hljs-number">1</span>
+</code></pre>
+<h2 id="&#x89E3;&#x6CD5;&#x4E00;&#xFF08;&#x4F4D;&#x8FD0;&#x7B97;&#xFF09;">&#x89E3;&#x6CD5;&#x4E00;&#xFF08;&#x4F4D;&#x8FD0;&#x7B97;&#xFF09;</h2>
+<pre><code class="lang-js"><span class="hljs-comment">/**
+ * @param {number} a
+ * @param {number} b
+ * @return {number}
+ */</span>
+<span class="hljs-keyword">var</span> getSum = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>) </span>{
+    <span class="hljs-keyword">var</span> sum, carry; 
+    sum = a ^ b;  <span class="hljs-comment">//&#x5F02;&#x6216;&#x8FD9;&#x91CC;&#x53EF;&#x770B;&#x505A;&#x662F;&#x76F8;&#x52A0;&#x4F46;&#x662F;&#x4E0D;&#x663E;&#x73B0;&#x8FDB;&#x4F4D;&#xFF0C;&#x6BD4;&#x5982;5 ^ 3</span>
+                 <span class="hljs-comment">/*0 1 0 1
+                   0 0 1 1
+                 ------------
+                   0 1 1 0      
+              &#x4E0A;&#x9762;&#x7684;&#x5982;&#x679C;&#x770B;&#x6210;&#x4F20;&#x7EDF;&#x7684;&#x52A0;&#x6CD5;&#xFF0C;&#x4E0D;&#x5C31;&#x662F;1+1=2&#xFF0C;&#x8FDB;1&#x5F97;0&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x6CA1;&#x6709;&#x663E;&#x793A;&#x8FDB;&#x4F4D;&#x51FA;&#x6765;&#xFF0C;&#x4EC5;&#x662F;&#x76F8;&#x52A0;&#xFF0C;0+1&#x6216;&#x8005;&#x662F;1+0&#x90FD;&#x4E0D;&#x7528;&#x8FDB;&#x4F4D;*/</span>
+
+    carry = (a &amp; b) &lt;&lt; <span class="hljs-number">1</span>;
+
+                <span class="hljs-comment">//&#x76F8;&#x4E0E;&#x4E3A;&#x4E86;&#x8BA9;&#x8FDB;&#x4F4D;&#x663E;&#x73B0;&#x51FA;&#x6765;&#xFF0C;&#x6BD4;&#x5982;5 &amp; 3</span>
+                <span class="hljs-comment">/* 0 1 0 1
+                   0 0 1 1
+                 ------------
+                   0 0 0 1
+              &#x4E0A;&#x9762;&#x7684;&#x6700;&#x4F4E;&#x4F4D;1&#x548C;1&#x76F8;&#x4E0E;&#x5F97;1&#xFF0C;&#x800C;&#x5728;&#x4E8C;&#x8FDB;&#x5236;&#x52A0;&#x6CD5;&#x4E2D;&#xFF0C;&#x8FD9;&#x91CC;1+1&#x4E5F;&#x5E94;&#x8BE5;&#x662F;&#x8981;&#x8FDB;&#x4F4D;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x521A;&#x597D;&#x543B;&#x5408;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x8FDB;&#x4F4D;1&#x5E94;&#x8BE5;&#x8981;&#x518D;&#x5F80;&#x524D;&#x4E00;&#x4F4D;&#xFF0C;&#x6240;&#x4EE5;&#x5DE6;&#x79FB;&#x4E00;&#x4F4D;*/</span>
+
+    <span class="hljs-keyword">if</span>(carry != <span class="hljs-number">0</span>)  <span class="hljs-comment">//&#x7ECF;&#x8FC7;&#x4E0A;&#x9762;&#x8FD9;&#x4E24;&#x6B65;&#xFF0C;&#x5982;&#x679C;&#x8FDB;&#x4F4D;&#x4E0D;&#x7B49;&#x4E8E;0&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x662F;&#x8BF4;&#x8FD8;&#x8981;&#x628A;&#x8FDB;&#x4F4D;&#x7ED9;&#x52A0;&#x4E0A;&#x53BB;&#xFF0C;&#x6240;&#x4EE5;&#x7528;&#x4E86;&#x5C3E;&#x9012;&#x5F52;&#xFF0C;&#x4E00;&#x76F4;&#x9012;&#x5F52;&#x5230;&#x8FDB;&#x4F4D;&#x662F;0&#x3002;</span>
+    {
+        <span class="hljs-keyword">return</span> getSum(sum, carry);
     }
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">return</span> sum;
 };
 </code></pre>
-<h2 id="&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#xFF09;&#x6563;&#x5217;&#x8868;&#x601D;&#x60F3;">&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#xFF09;&#x6563;&#x5217;&#x8868;&#x601D;&#x60F3;</h2>
-<p><img src="https://img-blog.csdnimg.cn/2020010216213280.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<ul>
-<li>&#x4ECD;&#x7136;&#x662F;&#x7EF4;&#x62A4;K&#x5927;&#x7684;Map&#x7ED3;&#x6784;</li>
-<li>&#x5982;&#x679C;&#x8D85;&#x8FC7;k&#x5927;&#x5C0F;&#x7684;&#x540E;&#xFF0C;&#x4ECD;&#x6CA1;&#x6709;&#x9047;&#x89C1;&#x91CD;&#x590D;&#x5143;&#x7D20;&#xFF0C;&#x5C31;&#x5C06;&#x6700;&#x5148;&#x9047;&#x89C1;&#x7684;&#x5143;&#x7D20;&#x79FB;&#x9664;</li>
-</ul>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> containsNearbyDuplicate = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">nums, k</span>) </span>{
-    <span class="hljs-keyword">var</span> set = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>()
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; ++i) {
-        <span class="hljs-keyword">if</span> (set.has(nums[i])) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
-        set.add(nums[i]);
-        <span class="hljs-keyword">if</span> (set.size &gt; k) {
-            set.delete(nums[i - k]);
-        }
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
-}
-</code></pre>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-01-02 16:20:53 </span> </footer>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-01-07 13:30:41 </span> </footer>
                                 
                                 </section>
                             
@@ -972,14 +952,10 @@
 
             
                 
-                <a href="217.存在重复元素.html" class="navigation navigation-prev " aria-label="Previous page: 217.存在重复元素">
+                <a href="350.两个数组的交集II.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 350.两个数组的交集II">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="237.删除链表中的节点.html" class="navigation navigation-next " aria-label="Next page: 237.删除链表中的节点">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -988,7 +964,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"219.存在重复元素II","level":"2.40","depth":1,"next":{"title":"237.删除链表中的节点","level":"2.41","depth":1,"path":"docs/237.删除链表中的节点.md","ref":"docs/237.删除链表中的节点.md","articles":[]},"previous":{"title":"217.存在重复元素","level":"2.39","depth":1,"path":"docs/217.存在重复元素.md","ref":"docs/217.存在重复元素.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/219.存在重复元素II.md","mtime":"2020-01-02T08:20:53.146Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-07T05:34:09.909Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"371.两整数之和","level":"2.48","depth":1,"next":{"title":"二分","level":"3.1","depth":1,"ref":"","articles":[]},"previous":{"title":"350.两个数组的交集II","level":"2.47","depth":1,"path":"docs/350.两个数组的交集II.md","ref":"docs/350.两个数组的交集II.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/371.两整数之和.md","mtime":"2020-01-07T05:30:41.570Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-07T05:34:09.909Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
