@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>414.第三大的数 · Gitbook Use</title>
+        <title>448.找到所有数组中消失的数字 · Gitbook Use</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="442.数组中重复的数据.html" />
     
-    
-    <link rel="prev" href="412.FizzBuzz.html" />
+    <link rel="prev" href="442.数组中重复的数据.html" />
     
 
     </head>
@@ -779,7 +777,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.50" data-path="414.第三大的数.html">
+        <li class="chapter " data-level="2.50" data-path="414.第三大的数.html">
             
                 <a href="414.第三大的数.html">
             
@@ -805,7 +803,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.52" data-path="448.找到所有数组中消失的数字.html">
+        <li class="chapter active" data-level="2.52" data-path="448.找到所有数组中消失的数字.html">
             
                 <a href="448.找到所有数组中消失的数字.html">
             
@@ -920,7 +918,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >414.第三大的数</a>
+        <a href=".." >448.找到所有数组中消失的数字</a>
     </h1>
 </div>
 
@@ -935,82 +933,46 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><img src="../Images/title-414.png" width="100%"></p>
-<h1 align="center" id="&#x7B2C;&#x4E09;&#x5927;&#x7684;&#x6570;">&#x7B2C;&#x4E09;&#x5927;&#x7684;&#x6570;</h1>
+                                <p><img src="../Images/title-448.png" width="100%"></p>
+<h1 align="center" id="&#x627E;&#x5230;&#x6240;&#x6709;&#x6570;&#x7EC4;&#x4E2D;&#x6D88;&#x5931;&#x7684;&#x6570;&#x5B57;">&#x627E;&#x5230;&#x6240;&#x6709;&#x6570;&#x7EC4;&#x4E2D;&#x6D88;&#x5931;&#x7684;&#x6570;&#x5B57;</h1>
 
-<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x975E;&#x7A7A;&#x6570;&#x7EC4;&#xFF0C;&#x8FD4;&#x56DE;&#x6B64;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;&#x4E09;&#x5927;&#x7684;&#x6570;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x4E2D;&#x6700;&#x5927;&#x7684;&#x6570;&#x3002;&#x8981;&#x6C42;&#x7B97;&#x6CD5;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5FC5;&#x987B;&#x662F;O(n)&#x3002;</p>
-<p>&#x793A;&#x4F8B; 1:
-|&#x8F93;&#x5165;  | &#x8F93;&#x51FA; | &#x89E3;&#x91CA;|
-|--|--|--|
-| [3, 2, 1]|1  |&#x7B2C;&#x4E09;&#x5927;&#x7684;&#x6570;&#x662F; 1. |
-| [1, 2,]|2 |&#x7B2C;&#x4E09;&#x5927;&#x7684;&#x6570;&#x4E0D;&#x5B58;&#x5728;, &#x6240;&#x4EE5;&#x8FD4;&#x56DE;&#x6700;&#x5927;&#x7684;&#x6570; 2 . |
-|[2, 2, 3, 1]|&#x8F93;&#x51FA;: 1  |&#x7B2C;&#x4E09;&#x5927;&#x4E14;&#x552F;&#x4E00;&#x51FA;&#x73B0;&#x7684;&#x6570;&#x3002;&#x5B58;&#x5728;&#x4E24;&#x4E2A;&#x503C;&#x4E3A;2&#x7684;&#x6570;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x6392;&#x7B2C;&#x4E8C; |</p>
-<h2 id="&#x6700;&#x4F18;&#x601D;&#x8DEF;&#x5E94;&#x8BE5;&#x662F;--&#x5C0F;&#x9876;&#x5806;&#x601D;&#x60F3;">&#x6700;&#x4F18;&#x601D;&#x8DEF;&#x5E94;&#x8BE5;&#x662F; -&gt;&#x5C0F;&#x9876;&#x5806;&#x601D;&#x60F3;</h2>
+<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x8303;&#x56F4;&#x5728;  1 &#x2264; a[i] &#x2264; n ( n = &#x6570;&#x7EC4;&#x5927;&#x5C0F; ) &#x7684; &#x6574;&#x578B;&#x6570;&#x7EC4;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E00;&#x4E9B;&#x51FA;&#x73B0;&#x4E86;&#x4E24;&#x6B21;&#xFF0C;&#x53E6;&#x4E00;&#x4E9B;&#x53EA;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#x3002;</p>
+<p>&#x627E;&#x5230;&#x6240;&#x6709;&#x5728; [1, n] &#x8303;&#x56F4;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x5B57;&#x3002;</p>
+<p>&#x60A8;&#x80FD;&#x5728;&#x4E0D;&#x4F7F;&#x7528;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#x4E14;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(n)&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5B8C;&#x6210;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x5417;? &#x4F60;&#x53EF;&#x4EE5;&#x5047;&#x5B9A;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x7EC4;&#x4E0D;&#x7B97;&#x5728;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#x5185;&#x3002;</p>
+<p>&#x793A;&#x4F8B;:</p>
+<pre><code>&#x8F93;&#x5165;:
+[4,3,2,7,8,2,3,1]
+
+&#x8F93;&#x51FA;:
+[5,6]
+</code></pre><h2 id="&#x89E3;&#x6CD5;&#x4E00;&#xFF08;hash&#xFF09;">&#x89E3;&#x6CD5;&#x4E00;&#xFF08;Hash&#xFF09;</h2>
 <ul>
-<li>&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x957F;&#x5EA6;&#x4E3A;3&#x7684;&#x5806;</li>
-<li>&#x4FDD;&#x6301;&#x8FD9;&#x4E2A;&#x5806;&#x6700;&#x5C0F;&#x7684;&#x6C38;&#x8FDC;&#x5728;&#x9876;&#x7AEF;</li>
-<li>&#x65B0;&#x7684;&#x5143;&#x7D20;&#x5982;&#x679C;&#x5927;&#x4E8E;&#x5806;&#x9876;&#x5143;&#x7D20;&#xFF0C;&#x5C31;&#x66FF;&#x6362;&#x6389;&#x5806;&#x9876;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x91CD;&#x65B0;&#x8C03;&#x6574;&#x4E3A;&#x5C0F;&#x9876;&#x5806;</li>
-<li>&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x5806;&#x9876;&#x5143;&#x7D20;<h2 id="&#x89E3;&#x6CD5;&#x4E00;&#xFF08;&#x53BB;&#x91CD;&#x3001;&#x5265;&#x79BB;&#xFF09;">&#x89E3;&#x6CD5;&#x4E00;&#xFF08;&#x53BB;&#x91CD;&#x3001;&#x5265;&#x79BB;&#xFF09;</h2>
-<img src="https://img-blog.csdnimg.cn/20191120144858850.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(N)O(N)&#x3002;</li>
+<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(N)O(N)&#x3002;<pre><code class="lang-js"><span class="hljs-keyword">var</span> findDisappearedNumbers = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) </span>{
+  <span class="hljs-keyword">var</span> max = <span class="hljs-built_in">Math</span>.max(...nums) &gt; nums.length+<span class="hljs-number">1</span> ? <span class="hljs-built_in">Math</span>.max(...nums) : nums.length+<span class="hljs-number">1</span>
+  <span class="hljs-keyword">var</span> obj = {}
+  <span class="hljs-keyword">var</span> res = []
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt;= nums.length; i++){
+      obj[nums[i]] = nums[i]
+  }
+  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; max; i++){
+      <span class="hljs-keyword">if</span>(!obj[i]){
+          res.push(i)
+      }
+  }
+  <span class="hljs-keyword">return</span> res
+};
+</code></pre>
+</li>
 </ul>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> thirdMax = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) </span>{
-    <span class="hljs-keyword">var</span> k = <span class="hljs-number">3</span>
-    <span class="hljs-keyword">var</span> obj = {}, arr = []
-    <span class="hljs-keyword">if</span>(nums.length &lt; <span class="hljs-number">3</span>){
-        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.max(...nums)
-    }<span class="hljs-comment">// &#x5982;&#x679C;&#x539F;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;3&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x6700;&#x5927;&#x503C;</span>
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; nums.length;i++){
-        <span class="hljs-keyword">if</span>(!obj[nums[i]]){
-            obj[nums[i]] = <span class="hljs-number">1</span>
-        }
-    }
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> key <span class="hljs-keyword">in</span> obj){
-        arr.push(<span class="hljs-built_in">Number</span>(key))
-    }<span class="hljs-comment">// &#x4E24;&#x6B21;for&#x662F;&#x4E3A;&#x4E86;&#x53BB;&#x91CD;&#xFF0C;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x4F18;&#x5316;&#xFF0C;&#x4F46;&#x610F;&#x4E49;&#x4E0D;&#x5927;</span>
-    <span class="hljs-keyword">if</span>(arr.length &lt; <span class="hljs-number">3</span>){
-        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.max(...arr)
-    }<span class="hljs-comment">// &#x5982;&#x679C;&#x65B0;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;3&#xFF0C;&#x5219;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x6700;&#x5927;&#x503C;</span>
-    <span class="hljs-keyword">while</span> (<span class="hljs-number">0</span> &lt; --k) {
-        arr.splice(arr.indexOf(<span class="hljs-built_in">Math</span>.max(...arr)), <span class="hljs-number">1</span>)
-    }<span class="hljs-comment">// &#x5982;&#x679C;&#x8FB9;&#x754C;&#x503C;&#x90FD;&#x4E0D;&#x6EE1;&#x8DB3;&#xFF0C;&#x5219;&#x5265;&#x79BB;&#x4E24;&#x6B21;&#x6700;&#x5927;&#x7684;&#x503C;&#xFF0C;&#x4E14;&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF08;&#x7B2C;&#x4E09;&#x5927;&#x503C;&#xFF09;</span>
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.max(...arr)
-};
+<p><img src="https://img-blog.csdnimg.cn/20200107162717640.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<h2 id="&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#x539F;&#x5730;&#x6BD4;&#x8F83;&#xFF09;">&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#x539F;&#x5730;&#x6BD4;&#x8F83;&#xFF09;</h2>
+<pre><code class="lang-js">
+
 </code></pre>
-<h2 id="&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#x53BB;&#x91CD;&#x3001;&#x6392;&#x5E8F;&#xFF09;">&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#x53BB;&#x91CD;&#x3001;&#x6392;&#x5E8F;&#xFF09;</h2>
-<p><img src="https://img-blog.csdnimg.cn/20191120173404630.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> thirdMax = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) </span>{
-    <span class="hljs-keyword">var</span> arr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(nums)
-    arr = [...arr]
-    arr.sort(newSort)
-    <span class="hljs-keyword">if</span>(arr.length&lt;<span class="hljs-number">3</span>) <span class="hljs-keyword">return</span> arr[<span class="hljs-number">0</span>]
-    <span class="hljs-keyword">return</span> arr[<span class="hljs-number">2</span>]
-};
-<span class="hljs-keyword">var</span> newSort = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">a, b</span>)</span>{
-    <span class="hljs-keyword">return</span> b - a
-}
-</code></pre>
-<h2 id="&#x89E3;&#x6CD5;&#x4E09;&#xFF08;&#x7EF4;&#x62A4;&#x957F;&#x5EA6;&#x4E3A;3&#x7684;&#x6570;&#x7EC4;&#xFF09;&#xFF08;&#x5DF2;&#x7ECF;&#x63A5;&#x8FD1;&#x6700;&#x4F18;&#x601D;&#x8DEF;&#x4E86;&#xFF09;">&#x89E3;&#x6CD5;&#x4E09;&#xFF08;&#x7EF4;&#x62A4;&#x957F;&#x5EA6;&#x4E3A;3&#x7684;&#x6570;&#x7EC4;&#xFF09;&#xFF08;&#x5DF2;&#x7ECF;&#x63A5;&#x8FD1;&#x6700;&#x4F18;&#x601D;&#x8DEF;&#x4E86;&#xFF09;</h2>
-<p><img src="https://img-blog.csdnimg.cn/20191120175108633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<pre><code class="lang-js"><span class="hljs-keyword">var</span> thirdMax = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) </span>{
-    <span class="hljs-keyword">var</span> brr = []
-    <span class="hljs-keyword">var</span> arr = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>(nums)
-    arr = [...arr]
-    <span class="hljs-keyword">if</span>(arr.length &lt; <span class="hljs-number">3</span>) <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.max(...arr)
-    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++){
-        <span class="hljs-keyword">if</span>(brr.length &lt; <span class="hljs-number">3</span>){
-            brr.push(arr[i])
-        }<span class="hljs-keyword">else</span>{
-            <span class="hljs-keyword">let</span> min = <span class="hljs-built_in">Math</span>.min(...brr)
-            <span class="hljs-keyword">if</span>(arr[i] &gt; min){
-                brr.splice(brr.indexOf(min), <span class="hljs-number">1</span>)
-                brr.push(arr[i])
-            }
-        }
-    }
-    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Math</span>.min(...brr)
-};
-</code></pre>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-01-07 13:50:14 </span> </footer>
+<h2 id="&#x89E3;&#x6CD5;&#x4E09;&#xFF08;&#x9E3D;&#x5DE2;&#x7406;&#x8BBA;&#xFF09;">&#x89E3;&#x6CD5;&#x4E09;&#xFF08;&#x9E3D;&#x5DE2;&#x7406;&#x8BBA;&#xFF09;</h2>
+<p>&#x5F85;&#x5B8C;&#x5584;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-01-07 18:10:45 </span> </footer>
                                 
                                 </section>
                             
@@ -1037,14 +999,10 @@
 
             
                 
-                <a href="412.FizzBuzz.html" class="navigation navigation-prev " aria-label="Previous page: 412.FizzBuzz">
+                <a href="442.数组中重复的数据.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 442.数组中重复的数据">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="442.数组中重复的数据.html" class="navigation navigation-next " aria-label="Next page: 442.数组中重复的数据">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1053,7 +1011,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"414.第三大的数","level":"2.50","depth":1,"next":{"title":"442.数组中重复的数据","level":"2.51","depth":1,"path":"docs/442.数组中重复的数据.md","ref":"docs/442.数组中重复的数据.md","articles":[]},"previous":{"title":"412.FizzBuzz","level":"2.49","depth":1,"path":"docs/412.FizzBuzz.md","ref":"docs/412.FizzBuzz.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/414.第三大的数.md","mtime":"2020-01-07T05:50:14.273Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-07T10:10:52.688Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"448.找到所有数组中消失的数字","level":"2.52","depth":1,"next":{"title":"二分","level":"3.1","depth":1,"ref":"","articles":[]},"previous":{"title":"442.数组中重复的数据","level":"2.51","depth":1,"path":"docs/442.数组中重复的数据.md","ref":"docs/442.数组中重复的数据.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"docs/448.找到所有数组中消失的数字.md","mtime":"2020-01-07T10:10:45.048Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-07T10:10:52.688Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
