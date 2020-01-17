@@ -110,6 +110,11 @@
             <a href="https://blog.csdn.net/jbj6568839z" target="_blank" class="custom-link">CSDN</a>
         </li>
     
+        
+        <li>
+            <a href="https://github.com/webbj97" target="_blank" class="custom-link">Github</a>
+        </li>
+    
     
 
     
@@ -1322,7 +1327,7 @@
 <li><code>A</code> &#x6700;&#x957F;&#x516C;&#x5171;&#x5B50;&#x4E32;</li>
 <li><code>A</code> &#x6700;&#x957F;&#x9012;&#x589E;&#x5B50;&#x5E8F;&#x5217;</li>
 <li><code>A</code> &#x6700;&#x77ED;&#x516C;&#x5171;&#x5B50;&#x5E8F;&#x5217;</li>
-<li><code>A</code> 0-1&#x80CC;&#x5305;&#x95EE;&#x9898;</li>
+<li><code>A</code> 0-1 &#x80CC;&#x5305;&#x95EE;&#x9898;</li>
 <li><code>A</code> &#x6574;&#x6570;&#x62C6;&#x5206;</li>
 <li><code>A</code> &#x6700;&#x5927;&#x5B50;&#x6570;&#x5217;</li>
 <li><code>A</code> &#x8D1D;&#x5C14;&#x66FC;-&#x798F;&#x7279;&#x7B97;&#x6CD5; - &#x627E;&#x5230;&#x6240;&#x6709;&#x56FE;&#x9876;&#x70B9;&#x7684;&#x6700;&#x77ED;&#x8DEF;&#x5F84;</li>
@@ -1342,7 +1347,162 @@
 </li>
 <li>Branch &amp; Bound - &#x8BB0;&#x4F4F;&#x5728;&#x56DE;&#x6EAF;&#x641C;&#x7D22;&#x7684;&#x6BCF;&#x4E2A;&#x9636;&#x6BB5;&#x627E;&#x5230;&#x7684;&#x6210;&#x672C;&#x6700;&#x4F4E;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#x627E;&#x5230;&#x7684;&#x6210;&#x672C;&#x6700;&#x5C0F;&#x503C;&#x4F5C;&#x4E3A;&#x4E0B;&#x9650;&#x3002;&#x4EE5;&#x4FBF;&#x4E22;&#x5F03;&#x6210;&#x672C;&#x5927;&#x4E8E;&#x6700;&#x5C0F;&#x503C;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x4F7F;&#x7528; BFS &#x904D;&#x5386;&#x4EE5;&#x53CA;&#x72B6;&#x6001;&#x7A7A;&#x95F4;&#x6811;&#x7684; DFS &#x904D;&#x5386;&#x3002;</li>
 </ul>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-01-16 16:23:38 </span> </footer>
+<h2 id="&#x6709;&#x7528;&#x7684;&#x4FE1;&#x606F;">&#x6709;&#x7528;&#x7684;&#x4FE1;&#x606F;</h2>
+<h3 id="&#x5927;-o-&#x7B26;&#x53F7;">&#x5927; O &#x7B26;&#x53F7;</h3>
+<p>&#x5927; O &#x7B26;&#x53F7;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x7B97;&#x6CD5;&#x7684;&#x589E;&#x957F;&#x987A;&#x5E8F;&#x3002;</p>
+<p><img src="../Images/structrue/O.jpg"></p>
+<p>&#x6765;&#x6E90;<a href="https://www.bigocheatsheet.com/" target="_blank">Big O Cheat Sheet</a></p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x6700;&#x5E38;&#x7528;&#x7684; &#x5927; O &#x6807;&#x8BB0;&#x6CD5; &#x5217;&#x8868;&#x4EE5;&#x53CA;&#x5B83;&#x4EEC;&#x4E0E;&#x4E0D;&#x540C;&#x5927;&#x5C0F;&#x8F93;&#x5165;&#x6570;&#x636E;&#x7684;&#x6027;&#x80FD;&#x6BD4;&#x8F83;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5927; O &#x6807;&#x8BB0;&#x6CD5;</th>
+<th>&#x8BA1;&#x7B97; 10 &#x4E2A;&#x5143;&#x7D20;</th>
+<th>&#x8BA1;&#x7B97; 100 &#x4E2A;&#x5143;&#x7D20;</th>
+<th>&#x8BA1;&#x7B97; 1000 &#x4E2A;&#x5143;&#x7D20;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O(1)</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>O(log N)</td>
+<td>3</td>
+<td>6</td>
+<td>9</td>
+</tr>
+<tr>
+<td>O(N)</td>
+<td>10</td>
+<td>100</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>O(N log N)</td>
+<td>30</td>
+<td>600</td>
+<td>9000</td>
+</tr>
+<tr>
+<td>O(N^2)</td>
+<td>100</td>
+<td>10000</td>
+<td>1000000</td>
+</tr>
+<tr>
+<td>O(2^N)</td>
+<td>1024</td>
+<td>1.26e+29</td>
+<td>1.07e+301</td>
+</tr>
+<tr>
+<td>O(N!)</td>
+<td>3628800</td>
+<td>9.3e+157</td>
+<td>4.02e+2567</td>
+</tr>
+</tbody>
+</table>
+<h3 id="&#x6570;&#x636E;&#x7ED3;&#x6784;&#x64CD;&#x4F5C;&#x7684;&#x590D;&#x6742;&#x6027;">&#x6570;&#x636E;&#x7ED3;&#x6784;&#x64CD;&#x4F5C;&#x7684;&#x590D;&#x6742;&#x6027;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x6570;&#x636E;&#x7ED3;&#x6784;</th>
+<th>&#x8FDE;&#x63A5;</th>
+<th>&#x67E5;&#x627E;</th>
+<th>&#x63D2;&#x5165;</th>
+<th>&#x5220;&#x9664;</th>
+<th>&#x5907;&#x6CE8;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x6570;&#x7EC4;</td>
+<td>1</td>
+<td>n</td>
+<td>n</td>
+<td>n</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x6808;</td>
+<td>n</td>
+<td>n</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x961F;&#x5217;</td>
+<td>n</td>
+<td>n</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x94FE;&#x8868;</td>
+<td>n</td>
+<td>n</td>
+<td>1</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x54C8;&#x5E0C;&#x8868;</td>
+<td>-</td>
+<td>n</td>
+<td>n</td>
+<td>n</td>
+<td>&#x5728;&#x5B8C;&#x5168;&#x54C8;&#x5E0C;&#x51FD;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x590D;&#x6742;&#x5EA6;&#x662F; O(1&#xFF09;</td>
+</tr>
+<tr>
+<td>&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x6811;</td>
+<td>n</td>
+<td>n</td>
+<td>n</td>
+<td>n</td>
+<td>&#x5728;&#x5E73;&#x8861;&#x6811;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x590D;&#x6742;&#x5EA6;&#x662F; O(log(n))</td>
+</tr>
+<tr>
+<td>B &#x6811;</td>
+<td>log(n)</td>
+<td>log(n)</td>
+<td>log(n)</td>
+<td>log(n)</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x7EA2;&#x9ED1;&#x6811;</td>
+<td>log(n)</td>
+<td>log(n)</td>
+<td>log(n)</td>
+<td>log(n)</td>
+<td></td>
+</tr>
+<tr>
+<td>AVL &#x6811;</td>
+<td>log(n)</td>
+<td>log(n)</td>
+<td>log(n)</td>
+<td>log(n)</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x5E03;&#x9686;&#x8FC7;&#x6EE4;&#x5668;</td>
+<td>-</td>
+<td>1</td>
+<td>1</td>
+<td>-</td>
+<td>&#x5B58;&#x5728;&#x4E00;&#x5B9A;&#x6982;&#x7387;&#x7684;&#x5224;&#x65AD;&#x9519;&#x8BEF;&#xFF08;&#x8BEF;&#x5224;&#x6210;&#x5B58;&#x5728;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-01-17 09:31:13 </span> </footer>
                                 
                                 </section>
                             
@@ -1381,7 +1541,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"数据结构专项","level":"1.4","depth":1,"next":{"title":"数组","level":"1.4.1","depth":2,"ref":"","articles":[]},"previous":{"title":"1207.独一无二的出现次数","level":"1.3.66","depth":2,"path":"docs/1207.独一无二的出现次数.md","ref":"docs/1207.独一无二的出现次数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z"}},"gitbook":"*"},"file":{"path":"structure/structure.md","mtime":"2020-01-16T08:23:38.230Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-16T08:23:43.064Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数据结构专项","level":"1.4","depth":1,"next":{"title":"数组","level":"1.4.1","depth":2,"ref":"","articles":[]},"previous":{"title":"1207.独一无二的出现次数","level":"1.3.66","depth":2,"path":"docs/1207.独一无二的出现次数.md","ref":"docs/1207.独一无二的出现次数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z","Github":"https://github.com/webbj97"}},"gitbook":"*"},"file":{"path":"structure/structure.md","mtime":"2020-01-17T01:31:13.401Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-17T01:31:26.647Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
