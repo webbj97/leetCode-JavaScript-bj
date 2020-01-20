@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>448.找到所有数组中消失的数字 · Gitbook Use</title>
+        <title>54.螺旋矩阵 · Gitbook Use</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="498.对角线遍历.html" />
+    <link rel="next" href="56.合并区间.html" />
     
     
-    <link rel="prev" href="442.数组中重复的数据.html" />
+    <link rel="prev" href="53.最大子序合.html" />
     
 
     </head>
@@ -427,7 +427,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.21" data-path="54.螺旋矩阵.html">
+        <li class="chapter active" data-level="1.3.21" data-path="54.螺旋矩阵.html">
             
                 <a href="54.螺旋矩阵.html">
             
@@ -856,7 +856,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.54" data-path="448.找到所有数组中消失的数字.html">
+        <li class="chapter " data-level="1.3.54" data-path="448.找到所有数组中消失的数字.html">
             
                 <a href="448.找到所有数组中消失的数字.html">
             
@@ -1222,7 +1222,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >448.找到所有数组中消失的数字</a>
+        <a href=".." >54.螺旋矩阵</a>
     </h1>
 </div>
 
@@ -1237,46 +1237,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><img src="../Images/title-448.jpg" width="100%"></p>
-<h1 align="center" id="&#x627E;&#x5230;&#x6240;&#x6709;&#x6570;&#x7EC4;&#x4E2D;&#x6D88;&#x5931;&#x7684;&#x6570;&#x5B57;">&#x627E;&#x5230;&#x6240;&#x6709;&#x6570;&#x7EC4;&#x4E2D;&#x6D88;&#x5931;&#x7684;&#x6570;&#x5B57;</h1>
-
-<p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x8303;&#x56F4;&#x5728;  1 &#x2264; a[i] &#x2264; n ( n = &#x6570;&#x7EC4;&#x5927;&#x5C0F; ) &#x7684; &#x6574;&#x578B;&#x6570;&#x7EC4;&#xFF0C;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E00;&#x4E9B;&#x51FA;&#x73B0;&#x4E86;&#x4E24;&#x6B21;&#xFF0C;&#x53E6;&#x4E00;&#x4E9B;&#x53EA;&#x51FA;&#x73B0;&#x4E00;&#x6B21;&#x3002;</p>
-<p>&#x627E;&#x5230;&#x6240;&#x6709;&#x5728; [1, n] &#x8303;&#x56F4;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x51FA;&#x73B0;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6570;&#x5B57;&#x3002;</p>
-<p>&#x60A8;&#x80FD;&#x5728;&#x4E0D;&#x4F7F;&#x7528;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#x4E14;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;O(n)&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x5B8C;&#x6210;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x5417;? &#x4F60;&#x53EF;&#x4EE5;&#x5047;&#x5B9A;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x7EC4;&#x4E0D;&#x7B97;&#x5728;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#x5185;&#x3002;</p>
-<p>&#x793A;&#x4F8B;:</p>
-<pre><code>&#x8F93;&#x5165;:
-[4,3,2,7,8,2,3,1]
-
-&#x8F93;&#x51FA;:
-[5,6]
-</code></pre><h2 id="&#x89E3;&#x6CD5;&#x4E00;&#xFF08;hash&#xFF09;">&#x89E3;&#x6CD5;&#x4E00;&#xFF08;Hash&#xFF09;</h2>
-<ul>
-<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(N)O(N)&#x3002;</li>
-<li>&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(N)O(N)&#x3002;<pre><code class="lang-js"><span class="hljs-keyword">var</span> findDisappearedNumbers = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">nums</span>) </span>{
-  <span class="hljs-keyword">var</span> max = <span class="hljs-built_in">Math</span>.max(...nums) &gt; nums.length+<span class="hljs-number">1</span> ? <span class="hljs-built_in">Math</span>.max(...nums) : nums.length+<span class="hljs-number">1</span>
-  <span class="hljs-keyword">var</span> obj = {}
-  <span class="hljs-keyword">var</span> res = []
-  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt;= nums.length; i++){
-      obj[nums[i]] = nums[i]
-  }
-  <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; max; i++){
-      <span class="hljs-keyword">if</span>(!obj[i]){
-          res.push(i)
-      }
-  }
-  <span class="hljs-keyword">return</span> res
-};
-</code></pre>
-</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/20200107162717640.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<h2 id="&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#x539F;&#x5730;&#x6BD4;&#x8F83;&#xFF09;">&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#x539F;&#x5730;&#x6BD4;&#x8F83;&#xFF09;</h2>
-<pre><code class="lang-js">
-
-</code></pre>
-<h2 id="&#x89E3;&#x6CD5;&#x4E09;&#xFF08;&#x9E3D;&#x5DE2;&#x7406;&#x8BBA;&#xFF09;">&#x89E3;&#x6CD5;&#x4E09;&#xFF08;&#x9E3D;&#x5DE2;&#x7406;&#x8BBA;&#xFF09;</h2>
-<p>&#x5F85;&#x5B8C;&#x5584;</p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-01-15 13:33:19 </span> </footer>
+                                <footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-01-19 11:38:07 </span> </footer>
                                 
                                 </section>
                             
@@ -1303,12 +1264,12 @@
 
             
                 
-                <a href="442.数组中重复的数据.html" class="navigation navigation-prev " aria-label="Previous page: 442.数组中重复的数据">
+                <a href="53.最大子序合.html" class="navigation navigation-prev " aria-label="Previous page: 53.最大子序合">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="498.对角线遍历.html" class="navigation navigation-next " aria-label="Next page: 498.对角线遍历">
+                <a href="56.合并区间.html" class="navigation navigation-next " aria-label="Next page: 56.合并区间">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1319,7 +1280,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"448.找到所有数组中消失的数字","level":"1.3.54","depth":2,"next":{"title":"498.对角线遍历","level":"1.3.55","depth":2,"path":"docs/498.对角线遍历.md","ref":"docs/498.对角线遍历.md","articles":[]},"previous":{"title":"442.数组中重复的数据","level":"1.3.53","depth":2,"path":"docs/442.数组中重复的数据.md","ref":"docs/442.数组中重复的数据.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z","Github":"https://github.com/webbj97"}},"gitbook":"*"},"file":{"path":"docs/448.找到所有数组中消失的数字.md","mtime":"2020-01-15T05:33:19.030Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-20T03:24:42.400Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"54.螺旋矩阵","level":"1.3.21","depth":2,"next":{"title":"56.合并区间","level":"1.3.22","depth":2,"path":"docs/56.合并区间.md","ref":"docs/56.合并区间.md","articles":[]},"previous":{"title":"53.最大子序合","level":"1.3.20","depth":2,"path":"docs/53.最大子序合.md","ref":"docs/53.最大子序合.md","articles":[]},"dir":"neutral"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z","Github":"https://github.com/webbj97"}},"gitbook":"*"},"file":{"path":"docs/54.螺旋矩阵.md","mtime":"2020-01-19T03:38:07.052Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-20T03:24:42.400Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
