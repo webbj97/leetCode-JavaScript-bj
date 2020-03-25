@@ -40,6 +40,8 @@ var merge = function(A, m, B, n) {
             arr.push(B[b++])
         }
     }
+    console.log('arr:', res);
+
     return arr
 };
 
