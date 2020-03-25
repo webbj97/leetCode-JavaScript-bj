@@ -1367,24 +1367,31 @@
 &#x4F60;&#x53EF;&#x4EE5;&#x8FED;&#x4EE3;&#x6216;&#x9012;&#x5F52;&#x5730;&#x53CD;&#x8F6C;&#x94FE;&#x8868;&#x3002;&#x4F60;&#x80FD;&#x5426;&#x7528;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;&#x89E3;&#x51B3;&#x8FD9;&#x9053;&#x9898;&#xFF1F;</p>
 <h2 id="&#x89E3;&#x6CD5;&#x4E00;-&#xFF08;&#x65B0;&#x5EFA;&#x8282;&#x70B9;&#xFF09;">&#x89E3;&#x6CD5;&#x4E00; &#xFF08;&#x65B0;&#x5EFA;&#x8282;&#x70B9;&#xFF09;</h2>
 <h4 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h4>
-<pre><code>* &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x8282;&#x70B9;
+<pre><code>* &#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x8BB0;&#x5F55;&#x524D;&#x9A71;pre&#xFF0C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x8BB0;&#x5F55;&#x540E;&#x7EE7;next
 * &#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x540E;&#x7F6E;&#x8282;&#x70B9;,&#x518D;&#x5C06;&#x4E4B;&#x540E;&#x9012;&#x5F52;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x8282;&#x70B9;
+* &#x4E0D;&#x65AD;&#x66F4;&#x65B0;cur.next = pre &#x5C31;&#x597D;&#x4E86;
+* &#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(N)O(N)
+* &#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#xFF1A;O(1)O(1)
 </code></pre><h4 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h4>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> reverseList = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">head</span>) </span>{
-    <span class="hljs-keyword">let</span> cur = head  <span class="hljs-comment">//  &#x5F53;&#x524D;&#x8282;&#x70B9;</span>
-    <span class="hljs-keyword">let</span> prev = <span class="hljs-literal">null</span> <span class="hljs-comment">//  &#x524D;&#x7F6E;&#x8282;&#x70B9;&#x521D;&#x59CB;&#x5316;&#xFF08;head&#x8282;&#x70B9;&#x65E0;&#x524D;&#x7F6E;&#x8282;&#x70B9;&#xFF09;</span>
-    <span class="hljs-keyword">while</span>(cur){
-        <span class="hljs-keyword">let</span> temp = cur.next <span class="hljs-comment">//  &#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x7684;&#x540E;&#x7F6E;&#x8282;&#x70B9; &#x4E4B;&#x540E;&#x9012;&#x5F52;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x8282;&#x70B9;</span>
-        cur.next = prev
-        prev = cur
-        cur = temp
-    };
-    <span class="hljs-keyword">return</span> prev
+    <span class="hljs-keyword">if</span> (!head || !head.next) <span class="hljs-keyword">return</span> head;
+
+    <span class="hljs-keyword">let</span> cur = head;
+    <span class="hljs-keyword">let</span> pre = <span class="hljs-literal">null</span>;
+
+    <span class="hljs-keyword">while</span>(cur) {
+        <span class="hljs-keyword">const</span> next = cur.next;
+        cur.next = pre;
+        pre = cur;
+        cur = next;
+    }
+
+    <span class="hljs-keyword">return</span> pre;
 };
 </code></pre>
 <h4 id="&#x7ED3;&#x679C;">&#x7ED3;&#x679C;</h4>
 <p><img src="https://img-blog.csdnimg.cn/20200324150943361.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-03-24 15:11:55 </span> </footer>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-03-24 15:39:44 </span> </footer>
                                 
                                 </section>
                             
@@ -1427,7 +1434,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.2反转链表","level":"1.3.1","depth":2,"next":{"title":"3.16字符串压缩","level":"1.3.2","depth":2,"path":"dailyCode/3.16字符串压缩.md","ref":"dailyCode/3.16字符串压缩.md","articles":[]},"previous":{"title":"LeetCode每日一题","level":"1.3","depth":1,"path":"dailyCode/dailycode.md","ref":"dailyCode/dailycode.md","articles":[{"title":"3.2反转链表","level":"1.3.1","depth":2,"path":"dailyCode/3.2反转链表.md","ref":"dailyCode/3.2反转链表.md","articles":[]},{"title":"3.16字符串压缩","level":"1.3.2","depth":2,"path":"dailyCode/3.16字符串压缩.md","ref":"dailyCode/3.16字符串压缩.md","articles":[]},{"title":"3.17拼写单词","level":"1.3.3","depth":2,"path":"dailyCode/3.17拼写单词.md","ref":"dailyCode/3.17拼写单词.md","articles":[]},{"title":"3.20最小的k个数","level":"1.3.4","depth":2,"path":"dailyCode/3.20最小的k个数.md","ref":"dailyCode/3.20最小的k个数.md","articles":[]},{"title":"3.23链表的中间结点","level":"1.3.5","depth":2,"path":"dailyCode/3.23链表的中间结点.md","ref":"dailyCode/3.23链表的中间结点.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z","Github":"https://github.com/webbj97"}},"gitbook":"*"},"file":{"path":"dailyCode/3.2反转链表.md","mtime":"2020-03-24T07:11:55.634Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-24T07:15:42.367Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.2反转链表","level":"1.3.1","depth":2,"next":{"title":"3.16字符串压缩","level":"1.3.2","depth":2,"path":"dailyCode/3.16字符串压缩.md","ref":"dailyCode/3.16字符串压缩.md","articles":[]},"previous":{"title":"LeetCode每日一题","level":"1.3","depth":1,"path":"dailyCode/dailycode.md","ref":"dailyCode/dailycode.md","articles":[{"title":"3.2反转链表","level":"1.3.1","depth":2,"path":"dailyCode/3.2反转链表.md","ref":"dailyCode/3.2反转链表.md","articles":[]},{"title":"3.16字符串压缩","level":"1.3.2","depth":2,"path":"dailyCode/3.16字符串压缩.md","ref":"dailyCode/3.16字符串压缩.md","articles":[]},{"title":"3.17拼写单词","level":"1.3.3","depth":2,"path":"dailyCode/3.17拼写单词.md","ref":"dailyCode/3.17拼写单词.md","articles":[]},{"title":"3.20最小的k个数","level":"1.3.4","depth":2,"path":"dailyCode/3.20最小的k个数.md","ref":"dailyCode/3.20最小的k个数.md","articles":[]},{"title":"3.23链表的中间结点","level":"1.3.5","depth":2,"path":"dailyCode/3.23链表的中间结点.md","ref":"dailyCode/3.23链表的中间结点.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z","Github":"https://github.com/webbj97"}},"gitbook":"*"},"file":{"path":"dailyCode/3.2反转链表.md","mtime":"2020-03-24T07:39:44.832Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-25T06:05:14.076Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
