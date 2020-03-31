@@ -26,23 +26,28 @@ A.length == n + m
 //     return A
 // };
 
-var merge = function(A, m, B, n) {
-    var a = 0, b = 0;
-    var arr = []
-    while(a < m || b < n){
-        if(a === m){
-            arr.push(B[b++])
-        }else if(b === n){
-            arr.push(A[a++])
-        }else if(A[a] < B[b]){
-            arr.push(A[a++])
-        }else{
-            arr.push(B[b++])
-        }
-    }
-    console.log('arr:', res);
+// var merge = function(A, m, B, n) {
+//     var a = 0, b = 0;
+//     var arr = []
+//     while(a < m || b < n){
+//         if(a === m){
+//             arr.push(B[b++])
+//         }else if(b === n){
+//             arr.push(A[a++])
+//         }else if(A[a] < B[b]){
+//             arr.push(A[a++])
+//         }else{
+//             arr.push(B[b++])
+//         }
+//     }
+//     return arr
+// };
 
-    return arr
+
+var merge = function(A, m, B, n) {
+    A.splice(m, n, ...B)
+    A.sort((a, b) => a - b)
+    return A
 };
 
 var res = merge([1,1,2,0,0,0],3,[2,5,6],3)
