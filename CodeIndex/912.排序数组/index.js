@@ -18,18 +18,6 @@
 //     console.log('nums:', nums);
 // };
 
-var sortArray = function(nums) {
-    var swap = function (i, j) {
-        var temp = 0
-        temp = nums[i]
-        nums[i] = nums[j]
-        nums[j] = temp
-    }
-
-    // return nums
-    console.log('nums:', nums);
-};
-
 
 var res = sortArray([5,1,1,2,0,0])
 console.log('res:', res);
