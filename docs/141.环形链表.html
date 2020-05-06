@@ -1400,12 +1400,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../structure/链表上.html">
+        <li class="chapter " data-level="1.5.3" data-path="../structure/linkList1.html">
             
-                <a href="../structure/链表上.html">
+                <a href="../structure/linkList1.html">
             
                     
-                    链表-单链表
+                    链表-上
             
                 </a>
             
@@ -1413,7 +1413,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" >
+        <li class="chapter " data-level="1.5.4" data-path="../structure/linkList2.html">
+            
+                <a href="../structure/linkList2.html">
+            
+                    
+                    链表-下
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" >
             
                 <span>
             
@@ -1426,7 +1439,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" >
+        <li class="chapter " data-level="1.5.6" >
             
                 <span>
             
@@ -1439,7 +1452,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" >
+        <li class="chapter " data-level="1.5.7" >
             
                 <span>
             
@@ -1452,7 +1465,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" >
+        <li class="chapter " data-level="1.5.8" >
             
                 <span>
             
@@ -1515,14 +1528,36 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p><img src="../Images/title-141.jpg" width="100%"></p>
+                                <!--
+ * @desc:
+ * @Author: 余光
+ * @Email: webbj97@163.com
+ * @Date: 2019-12-31 09:21:59
+ -->
 <h1 align="center" id="&#x73AF;&#x5F62;&#x94FE;&#x8868;">&#x73AF;&#x5F62;&#x94FE;&#x8868;</h1>
 
-
+<h2 id="&#x4E00;&#x3001;leetcode&#x9898;&#x89E3;">&#x4E00;&#x3001;LeetCode&#x9898;&#x89E3;</h2>
+<h5 id="&#x77A7;&#x4E00;&#x77A7;&#xFF5E;">&#x77A7;&#x4E00;&#x77A7;&#xFF5E;</h5>
+<ul>
+<li>&#x535A;&#x5065;&#x7684;LeetCode&#x9898;&#x89E3;&#xFF1A;<a href="https://webbj97.github.io/leetCode-Js/" target="_blank">Gitbook&#x7248;&#x672C;&#x4F20;&#x9001;&#x95E8;</a></li>
+<li>&#x535A;&#x5065;&#x7684;LeetCode&#x9898;&#x89E3;&#xFF1A;<a href="https://blog.csdn.net/jbj6568839z/article/details/103808459" target="_blank">CSDN&#x4F20;&#x9001;&#x95E8;</a></li>
+<li>&#x6709;&#x8DA3;&#x7684;CSS&#xFF1A;<a href="https://webbj97.github.io/Interesting-CSS/" target="_blank">Gitbook&#x4F20;&#x9001;&#x95E8;</a></li>
+<li>&#x524D;&#x7AEF;&#x8FDB;&#x9636;&#x7B14;&#x8BB0;&#xFF1A;<a href="https://webbj97.github.io/summary/" target="_blank">Gitbook&#x4F20;&#x9001;&#x95E8;</a></li>
+</ul>
+<h2 id="&#x4E8C;&#x3001;&#x7B97;&#x6CD5;&#x9898;">&#x4E8C;&#x3001;&#x7B97;&#x6CD5;&#x9898;</h2>
+<h3 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h3>
 <p>&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x94FE;&#x8868;&#xFF0C;&#x5224;&#x65AD;&#x94FE;&#x8868;&#x4E2D;&#x662F;&#x5426;&#x6709;&#x73AF;&#x3002;</p>
 <p>&#x4E3A;&#x4E86;&#x8868;&#x793A;&#x7ED9;&#x5B9A;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x73AF;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x6574;&#x6570; pos &#x6765;&#x8868;&#x793A;&#x94FE;&#x8868;&#x5C3E;&#x8FDE;&#x63A5;&#x5230;&#x94FE;&#x8868;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF08;&#x7D22;&#x5F15;&#x4ECE; 0 &#x5F00;&#x59CB;&#xFF09;&#x3002; &#x5982;&#x679C; pos &#x662F; -1&#xFF0C;&#x5219;&#x5728;&#x8BE5;&#x94FE;&#x8868;&#x4E2D;&#x6CA1;&#x6709;&#x73AF;&#x3002;</p>
-<h2 id="&#x89E3;&#x6CD5;&#x4E00;">&#x89E3;&#x6CD5;&#x4E00;</h2>
-<p><img src="https://img-blog.csdnimg.cn/20191230184648891.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<p><strong>&#x793A;&#x4F8B; 1&#xFF1A;</strong></p>
+<pre><code>&#x8F93;&#x5165;&#xFF1A;head = [3,2,0,-4], pos = 1
+&#x8F93;&#x51FA;&#xFF1A;true
+&#x89E3;&#x91CA;&#xFF1A;&#x94FE;&#x8868;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x73AF;&#xFF0C;&#x5176;&#x5C3E;&#x90E8;&#x8FDE;&#x63A5;&#x5230;&#x7B2C;&#x4E8C;&#x4E2A;&#x8282;&#x70B9;&#x3002;
+</code></pre><h2 id="&#x89E3;&#x6CD5;&#x4E00;-&#xFF08;set&#xFF09;">&#x89E3;&#x6CD5;&#x4E00; &#xFF08;set&#xFF09;</h2>
+<h5 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h5>
+<ul>
+<li>&#x904D;&#x5386;&#x94FE;&#x8868;&#xFF0C;&#x653E;&#x5165;set&#x7ED3;&#x6784;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8BC1;&#x660E;&#x6709;&#x73AF;</li>
+</ul>
+<h5 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h5>
 <pre><code class="lang-js"><span class="hljs-keyword">var</span> hasCycle = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">head</span>) </span>{
     <span class="hljs-keyword">var</span> setBox = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Set</span>()
     <span class="hljs-keyword">while</span>(head != <span class="hljs-literal">null</span>){
@@ -1536,7 +1571,31 @@
     <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
 };
 </code></pre>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-01-15 13:33:19 </span> </footer>
+<h5 id="&#x7ED3;&#x679C;">&#x7ED3;&#x679C;</h5>
+<p><img src="https://img-blog.csdnimg.cn/20191230184648891.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<h2 id="&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#x5FEB;&#x6162;&#x6307;&#x9488;&#xFF09;">&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#x5FEB;&#x6162;&#x6307;&#x9488;&#xFF09;</h2>
+<h5 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h5>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x6709;&#x73AF;&#x7684;&#x94FE;&#x8868;&#xFF0C;&#x6BD4;&#x4F5C;&#x4E00;&#x4E2A;&#x73AF;&#x5F62;&#x8DD1;&#x9053;&#xFF0C;&#x8DD1;&#x7684;&#x5FEB;&#x7684;&#x8FD0;&#x52A8;&#x5458;&#x8FDF;&#x65E9;&#x4F1A;&#x518D;&#x6B21;&#x548C;&#x8DD1;&#x5F97;&#x6162;&#x7684;&#x8FD0;&#x52A8;&#x5458;&#x76F8;&#x9047;</li>
+<li>&#x6162;&#x6307;&#x9488;&#x4E00;&#x6B21;&#x4E00;&#x5B9A;1&#x4F4D;&#xFF0C;&#x5FEB;&#x6307;&#x9488;&#x4E00;&#x6B21;&#x79FB;&#x52A8;2&#x4F4D;&#xFF0C;&#x5FEB;&#x6307;&#x9488;&#x5982;&#x679C;&#x8DD1;&#x9053;&#x4E86;&#x7EC8;&#x70B9;&#xFF0C;&#x8BC1;&#x660E;&#x65E0;&#x73AF;&#xFF0C;&#x5426;&#x5219;&#x4E00;&#x5B9A;&#x4F1A;&#x76F8;&#x9047;<h5 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h5>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> hasCycle = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">head</span>) </span>{
+  <span class="hljs-keyword">if</span>(!head || !head.next) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  <span class="hljs-keyword">var</span> slow = head
+  <span class="hljs-keyword">var</span> fast = head.next
+  <span class="hljs-keyword">while</span>( slow != fast ){
+      <span class="hljs-keyword">if</span>(fast == <span class="hljs-literal">null</span> || fast.next == <span class="hljs-literal">null</span>){
+          <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+      }
+      slow = slow.next
+      fast = fast.next.next
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+};
+</code></pre>
+<h5 id="&#x7ED3;&#x679C;">&#x7ED3;&#x679C;</h5>
+<img src="https://img-blog.csdnimg.cn/20200506112547981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-05-06 15:08:24 </span> </footer>
                                 
                                 </section>
                             
@@ -1579,7 +1638,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"141.环形链表","level":"1.4.34","depth":2,"next":{"title":"167.两数之和II-输入有序数组","level":"1.4.35","depth":2,"path":"docs/167.两数之和II-输入有序数组.md","ref":"docs/167.两数之和II-输入有序数组.md","articles":[]},"previous":{"title":"136.只出现一次的数字","level":"1.4.33","depth":2,"path":"docs/136.只出现一次的数字.md","ref":"docs/136.只出现一次的数字.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","github-buttons","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"github-buttons":{"buttons":[{"user":"webbj97","repo":"leetCode-Js","type":"star","size":"large"},{"user":"webbj97","type":"follow","width":"230","count":false}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z","Github":"https://github.com/webbj97"}},"gitbook":"*","description":"LeetCode题解Js版"},"file":{"path":"docs/141.环形链表.md","mtime":"2020-01-15T05:33:19.028Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-06T02:04:05.673Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"141.环形链表","level":"1.4.34","depth":2,"next":{"title":"167.两数之和II-输入有序数组","level":"1.4.35","depth":2,"path":"docs/167.两数之和II-输入有序数组.md","ref":"docs/167.两数之和II-输入有序数组.md","articles":[]},"previous":{"title":"136.只出现一次的数字","level":"1.4.33","depth":2,"path":"docs/136.只出现一次的数字.md","ref":"docs/136.只出现一次的数字.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","github-buttons","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"github-buttons":{"buttons":[{"user":"webbj97","repo":"leetCode-Js","type":"star","size":"large"},{"user":"webbj97","type":"follow","width":"230","count":false}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z","Github":"https://github.com/webbj97"}},"gitbook":"*","description":"LeetCode题解Js版"},"file":{"path":"docs/141.环形链表.md","mtime":"2020-05-06T07:08:24.727Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-06T10:24:42.022Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
