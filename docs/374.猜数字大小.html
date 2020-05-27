@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>54.螺旋矩阵 · Gitbook Use</title>
+        <title>374.猜数字大小 · Gitbook Use</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -82,10 +82,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="56.合并区间.html" />
+    <link rel="next" href="371.两整数之和.html" />
     
     
-    <link rel="prev" href="53.最大子序合.html" />
+    <link rel="prev" href="371.两整数之和.html" />
     
 
     <style>
@@ -627,7 +627,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.25" data-path="54.螺旋矩阵.html">
+        <li class="chapter " data-level="1.4.25" data-path="54.螺旋矩阵.html">
             
                 <a href="54.螺旋矩阵.html">
             
@@ -1134,7 +1134,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.64" data-path="374.猜数字大小.html">
+        <li class="chapter active" data-level="1.4.64" data-path="374.猜数字大小.html">
             
                 <a href="374.猜数字大小.html">
             
@@ -1656,7 +1656,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >54.螺旋矩阵</a>
+        <a href=".." >374.猜数字大小</a>
     </h1>
 </div>
 
@@ -1671,7 +1671,82 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-01-19 11:38:07 </span> </footer>
+                                <!--
+ * @desc:
+ * @Author: 余光
+ * @Email: webbj97@163.com
+ * @Date: 2020-05-27 17:17:18
+-->
+<h1 align="center" id="&#x731C;&#x6570;&#x5B57;&#x5927;&#x5C0F;">&#x731C;&#x6570;&#x5B57;&#x5927;&#x5C0F;</h1>
+
+<h2 id="&#x4E00;&#x3001;leetcode&#x9898;&#x89E3;">&#x4E00;&#x3001;LeetCode&#x9898;&#x89E3;</h2>
+<h4 id="&#x77A7;&#x4E00;&#x77A7;&#xFF08;&#x6C42;star&#xFF09;">&#x77A7;&#x4E00;&#x77A7;&#xFF08;&#x6C42;star!&#xFF09;</h4>
+<ul>
+<li>LeetCode&#x9898;&#x89E3;Javascript&#x7248;&#x672C;&#xFF1A;<a href="https://webbj97.github.io/leetCode-Js/" target="_blank">Gitbook&#x7248;&#x672C;&#x4F20;&#x9001;&#x95E8;</a></li>
+<li>LeetCode&#x9898;&#x89E3;Javascript&#x7248;&#x672C;&#xFF1A;<a href="https://blog.csdn.net/jbj6568839z/article/details/103808459" target="_blank">CSDN&#x4F20;&#x9001;&#x95E8;</a></li>
+<li>&#x524D;&#x7AEF;&#x8FDB;&#x9636;&#x7B14;&#x8BB0;&#xFF1A;<a href="https://webbj97.github.io/summary/" target="_blank">Gitbook&#x4F20;&#x9001;&#x95E8;</a></li>
+</ul>
+<h2 id="&#x4E8C;&#x3001;&#x7B97;&#x6CD5;&#x9898;">&#x4E8C;&#x3001;&#x7B97;&#x6CD5;&#x9898;</h2>
+<h3 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h3>
+<p>&#x6211;&#x4EEC;&#x6B63;&#x5728;&#x73A9;&#x4E00;&#x4E2A;&#x731C;&#x6570;&#x5B57;&#x6E38;&#x620F;&#x3002; &#x6E38;&#x620F;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;
+&#x6211;&#x4ECE; 1 &#x5230; n &#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x3002; &#x4F60;&#x9700;&#x8981;&#x731C;&#x6211;&#x9009;&#x62E9;&#x4E86;&#x54EA;&#x4E2A;&#x6570;&#x5B57;&#x3002;
+&#x6BCF;&#x6B21;&#x4F60;&#x731C;&#x9519;&#x4E86;&#xFF0C;&#x6211;&#x4F1A;&#x544A;&#x8BC9;&#x4F60;&#x8FD9;&#x4E2A;&#x6570;&#x5B57;&#x662F;&#x5927;&#x4E86;&#x8FD8;&#x662F;&#x5C0F;&#x4E86;&#x3002;
+&#x4F60;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x9884;&#x5148;&#x5B9A;&#x4E49;&#x597D;&#x7684;&#x63A5;&#x53E3; guess(int num)&#xFF0C;&#x5B83;&#x4F1A;&#x8FD4;&#x56DE; 3 &#x4E2A;&#x53EF;&#x80FD;&#x7684;&#x7ED3;&#x679C;&#xFF08;-1&#xFF0C;1 &#x6216; 0&#xFF09;&#xFF1A;</p>
+<pre><code>-1 : &#x6211;&#x7684;&#x6570;&#x5B57;&#x6BD4;&#x8F83;&#x5C0F;
+ 1 : &#x6211;&#x7684;&#x6570;&#x5B57;&#x6BD4;&#x8F83;&#x5927;
+ 0 : &#x606D;&#x559C;&#xFF01;&#x4F60;&#x731C;&#x5BF9;&#x4E86;&#xFF01;
+</code></pre><p><strong>&#x793A;&#x4F8B; :</strong></p>
+<pre><code>&#x8F93;&#x5165;: n = 10, pick = 6
+&#x8F93;&#x51FA;: 6
+</code></pre><h2 id="&#x89E3;&#x6CD5;&#x4E00;-&#xFF08;&#x66B4;&#x529B;&#xFF09;">&#x89E3;&#x6CD5;&#x4E00; &#xFF08;&#x66B4;&#x529B;&#xFF09;</h2>
+<h4 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h4>
+<ul>
+<li>&#x5FAA;&#x73AF;&#x904D;&#x5386;&#x6574;&#x4E2A;&#x6570;&#x636E;</li>
+<li>&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;O(n)</li>
+</ul>
+<h4 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> guessNumber = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">n</span>) </span>{
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; n; i++){
+        <span class="hljs-keyword">if</span>(guess(i) === <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> i
+    }
+    <span class="hljs-keyword">return</span> n
+};
+</code></pre>
+<h2 id="&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#xFF09;">&#x89E3;&#x6CD5;&#x4E8C;&#xFF08;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#xFF09;</h2>
+<h4 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h4>
+<ul>
+<li>&#x5229;&#x7528;set&#x5B58;&#x50A8;&#x6570;&#x7EC4;&#x4E2D;&#x51FA;&#x73B0;&#x7684;&#x4E0D;&#x91CD;&#x590D;&#x7684;&#x6570;&#x5B57;</li>
+<li><p><code>[ (a+b+c) * 3 - (a+a+a+b+b+b+c) ] / 2 = c</code></p>
+<h4 id="&#x4EE3;&#x7801;">&#x4EE3;&#x7801;</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> guessNumber = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">n</span>) </span>{
+  <span class="hljs-keyword">let</span> left = <span class="hljs-number">1</span>;
+  <span class="hljs-keyword">let</span> right = n;
+  <span class="hljs-keyword">let</span> mid;
+
+  <span class="hljs-keyword">while</span>(left &lt;= right){
+      mid = <span class="hljs-built_in">parseInt</span>((left + right)/<span class="hljs-number">2</span>);
+      <span class="hljs-keyword">if</span>(guess(mid) === <span class="hljs-number">0</span>){
+          <span class="hljs-keyword">break</span>
+      }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(guess(mid) === <span class="hljs-number">1</span>){
+          left = mid + <span class="hljs-number">1</span>;
+      }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(guess(mid) === <span class="hljs-number">-1</span>){
+          right = mid<span class="hljs-number">-1</span>;
+      }
+  }
+  <span class="hljs-keyword">return</span> mid
+};
+</code></pre>
+<h5 id="&#x7ED3;&#x679C;">&#x7ED3;&#x679C;</h5>
+<p><img src="https://img-blog.csdnimg.cn/20200520144714218.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2piajY1Njg4Mzl6,size_16,color_FFFFFF,t_70" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<h3 id="&#x5173;&#x4E8E;&#x6211;">&#x5173;&#x4E8E;&#x6211;</h3>
+</li>
+<li><p><strong>decs&#xFF1A;</strong> 19&#x5E74;&#x6BD5;&#x4E1A;&#x7684;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x4E00;&#x679A;&#xFF0C;&#x6C89;&#x8FF7;Js</p>
+</li>
+<li><strong>E-mail&#xFF1A;</strong> webbj97@163.com</li>
+<li><strong>&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#xFF1A;</strong> <a href="https://blog.csdn.net/jbj6568839z" target="_blank">CSDN</a></li>
+<li><strong>GitHub&#xFF1A;</strong> <a href="https://github.com/webbj97" target="_blank">&#x4F20;&#x9001;&#x95E8;</a></li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> &#xA9; All Rights Reserved </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> updated 2020-05-27 17:17:20 </span> </footer>
                                 
                                 </section>
                             
@@ -1698,12 +1773,12 @@
 
             
                 
-                <a href="53.最大子序合.html" class="navigation navigation-prev " aria-label="Previous page: 53.最大子序合">
+                <a href="371.两整数之和.html" class="navigation navigation-prev " aria-label="Previous page: 371.两整数之和">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="56.合并区间.html" class="navigation navigation-next " aria-label="Next page: 56.合并区间">
+                <a href="371.两整数之和.html" class="navigation navigation-next " aria-label="Next page: 387.两整数之和">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1714,7 +1789,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"54.螺旋矩阵","level":"1.4.25","depth":2,"next":{"title":"56.合并区间","level":"1.4.26","depth":2,"path":"docs/56.合并区间.md","ref":"docs/56.合并区间.md","articles":[]},"previous":{"title":"53.最大子序合","level":"1.4.24","depth":2,"path":"docs/53.最大子序合.md","ref":"docs/53.最大子序合.md","articles":[]},"dir":"neutral"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","github-buttons","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"github-buttons":{"buttons":[{"user":"webbj97","repo":"leetCode-Js","type":"star","size":"large"},{"user":"webbj97","type":"follow","width":"230","count":false}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z","Github":"https://github.com/webbj97"}},"gitbook":"*","description":"LeetCode题解Js版"},"file":{"path":"docs/54.螺旋矩阵.md","mtime":"2020-01-19T03:38:07.052Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-27T09:17:25.056Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"374.猜数字大小","level":"1.4.64","depth":2,"next":{"title":"387.两整数之和","level":"1.4.65","depth":2,"path":"docs/371.两整数之和.md","ref":"docs/371.两整数之和.md","articles":[]},"previous":{"title":"371.两整数之和","level":"1.4.63","depth":2,"path":"docs/371.两整数之和.md","ref":"docs/371.两整数之和.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","page-footer-ex","code","emphasize","github","github-buttons","sectionx"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"emphasize":{},"github":{"url":"https://github.com/webbj97"},"page-footer-ex":{"copyright":"© All Rights Reserved","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"updated"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"sectionx":{},"highlight":{},"github-buttons":{"buttons":[{"user":"webbj97","repo":"leetCode-Js","type":"star","size":"large"},{"user":"webbj97","type":"follow","width":"230","count":false}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"姜博健","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook Use","links":{"sidebar":{"CSDN":"https://blog.csdn.net/jbj6568839z","Github":"https://github.com/webbj97"}},"gitbook":"*","description":"LeetCode题解Js版"},"file":{"path":"docs/374.猜数字大小.md","mtime":"2020-05-27T09:17:20.851Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-27T09:17:25.056Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
